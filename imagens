@@ -1,1 +1,3 @@
-imagens/meu-arquivo.txt
+git add imagens/minha-imagem.jpg
+git commit -m "Adicionando nova imagem"
+git push origin main
