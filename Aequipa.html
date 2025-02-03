@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CASA DOS MAIAS - História</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    background: #f8f8f8;
+}
+
+
+.nav-container {
+    position: fixed;    /* Fixa o menu no topo da página, ele não se move ao rolar */
+    top: 0;     /* Mantém a barra no topo da página */
+    left: 0;    /* Alinha a barra à esquerda da tela */
+    width: 100%;    /* Faz com que a barra ocupe toda a largura da tela */
+    display: flex;  /* Usa Flexbox para alinhar os elementos dentro da barra */
+    justify-content: space-between;     /* Distribui os itens: um na esquerda e outro na direita */
+    align-items: center;    /* Centraliza os itens verticalmente */
+    background: white;  /* Define o fundo da barra como branco */
+    padding: 20px 50px; /* Adiciona espaço interno: 20px acima/abaixo e 50px nas laterais */
+    z-index: 1000;  /* Garante que a barra fique sobre outros elementos da página */
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   /* Adiciona uma leve sombra para destacar a barra */
+}
+
+    .logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .nav {
+        display: flex;
+        flex-grow: 1;  
+        justify-content: center; 
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav a:hover {
+        color: #c27a48;
+    }
+.submenu {
+        display: none;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+.conteudo {
+    display: flex;
+    align-items: center; /* Garante alinhamento vertical */
+    justify-content: space-between; /* Espaço uniforme entre os elementos */
+    max-width: 1200px;
+    margin: 80px auto;
+    gap: 20px; /* Garante um espaçamento uniforme */
+}
+
+    .texto {
+        flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+    }
+
+    .texto h2 {
+        font-size: 28px;
+        color: #c19a6b;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .texto p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .imagem {
+        flex: 1; /* Permite que a imagem tenha o mesmo peso que o texto */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        padding: 50px;
+}
+
+.event-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+    .image-stack {
+        position: relative;
+        width: 350px; /* Ajuste conforme necessário */
+        height: auto;
+        display: flex;
+        flex-direction: column; /* Mantém as imagens empilhadas */
+        align-items: center; /* Centraliza as imagens */
+    }
+
+    .image-stack img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+
+
+    .img-medium {
+        width: 90%;
+        position: absolute;
+        top: 30px; /* Ajuste para melhor sobreposição */
+        z-index: 2;
+    }
+
+    /* NOVA IMAGEM NO MEIO, MAS DESLOCADA PARA A ESQUERDA */
+    .img-esquerda {
+        width: 85%;
+        position: absolute;
+        left: -350px; /* Move um pouco para a esquerda */
+        top: 50%; /* Coloca no meio das outras */
+        transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+        z-index: 1;
+    }
+
+    .img-small {
+        width: 85%;
+        position: relative;
+        margin-top: -40px; /* Ajusta a sobreposição */
+        z-index: 2;
+    }
+
+    .image-stack img:hover {
+        transform: scale(1.05);
+    }
+    .event-info {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+    }
+
+    .capacity h2 {
+        font-size: 16px;
+        color: #333;
+        margin: 0;
+    }
+    .capacity h3 {
+        font-size: 16px;
+        color: #8c6b4f;
+        margin: 0;
+    }   
+
+    .capacity span {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .capacity small {
+        display: block;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .event-types, .services {
+        margin-top: 20px;
+    }
+
+    .event-types h3, .services h3 {
+        font-size: 16px;
+        color: #8c6b4f;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .event-types ul, .services ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .event-types li, .services li {
+        font-size: 14px;
+        color: #333;
+        padding: 3px 0;
+}
+
+.events {
+        text-align: center;
+        padding: 50px;
+        background-color: #F8F5F0;
+        }
+        .events h2 {
+            font-size: 28px;
+            color: #8B6F4E;
+        }
+        .subtitle {
+            font-size: 20px;
+            font-style: italic;
+            color: #8B6F4E;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #B8A389;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #8B6F4E;
+        }
+        .opinions-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+
+        .opinions-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .stars {
+            font-size: 20px;
+            color: gold;
+        }
+
+        .btn {
+            background: #c4a47c;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: white;
+        }
+
+        .btn:hover {
+            background: #a0815e;
+        }
+
+        /* Carrossel de opiniões */
+        .opinions-slider {
+            width: 400px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .opinion {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            width: 100%;
+            transition: opacity 0.5s;
+            opacity: 0;
+            text-align: left;
+        }
+
+        .opinion.active {
+            opacity: 1;
+}
+
+footer {
+    text-align: center;
+     padding: 20px;
+     background-color: #f1f1f1;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s;
+    }
+    .icon:hover {
+        transform: scale(1.1);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    ul li a:hover {
+        color: #333;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+    }
+
+    .footer-section h3, .footer-section h2 {
+        font-family: serif;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-size: 18px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+        color: #333;
+    }
+</style>
+</head>
+<script>
+   
+        const opinions = document.querySelectorAll(".opinion");
+        let currentOpinion = 0;
+        let autoSlide = setInterval(nextOpinion, 4000); // Troca a cada 4s
+
+        function nextOpinion() {
+            opinions[currentOpinion].classList.remove("active");
+            currentOpinion = (currentOpinion + 1) % opinions.length;
+            opinions[currentOpinion].classList.add("active");
+        }
+
+        // Parar ao passar o mouse
+        const slider = document.getElementById("opinions-slider");
+        slider.addEventListener("mouseenter", () => clearInterval(autoSlide));
+        slider.addEventListener("mouseleave", () => autoSlide = setInterval(nextOpinion, 4000));
+
+        // Ativar a primeira opinião ao carregar
+        opinions[currentOpinion].classList.add("active");
+    
+</script>
+
+<body>
+<header>
+    <div class="nav-container" id="navbar">
+        <img class="logo" src="data:image/jpeg;base64,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" alt="Quinta das Carpas Logo">
+        <ul class="nav">
+            <li><a href="QuintaEssencia.html">Home</a></li>
+            <li>
+                <a href="Sobre.html">Sobre</a>
+                <ul class="submenu">
+                    <li><a href="SobreAquinta.html">A Quinta</a></li>
+                    <li><a href="Aequipa.html">Serviços & Capacidade</a></li>
+                </ul>
+            </li>
+            <li><a href="Eventos.html">Eventos</a></li>
+            <li>
+                <a href="portofolio.html">Portofólio</a>
+                <ul class="submenu">
+                    <li><a href="PortofolioSobreAquinta.html">Quinta</a></li>
+                    <li><a href="PortofolioSobreOsMomentos.html">Momentos</a></li>
+                    <li><a href="PortofolioSobreDecoraçãoeAmbientes.html">Decoração & Ambiente</a></li>
+                    <li><a href="PortofolioViedos.html">Vídeos</a></li>
+                </ul>
+            </li>
+            <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+    </div>
+</header>
+
+        <section class="conteudo">
+            <div class="texto">
+                <h2>ESPLÊNDIDA, ELEGANTE E REQUINTADA</h2>
+                <p>A Casa Dos Maias oferece diferentes opções de espaços que possibilitam moldar o espaço a qualquer evento indoor ou</p>
+                <p>outdoor. Honrando o bom nome das pessoas do Norte organizamos o seu evento de acordo com as preferências, oferecendo</p>
+                <p>um serviço personalizado e uma vasta gama de entidades parceiras que trabalham diariamente connosco!</p>
+                <p>O espaço brinda aos noivos com a oportunidade de passear e tirar fotos num belíssimo jardim ou, se assim o desejarem, realizar uma cerimónia no exterior.</p>
+                <p>Além disso, possui um parque de estacionamento privado com capacidade para 150 veículos.</p>
+            </div>
+            <div class="imagem">
+                <img src="http://www.casadosmaias.com/images/gallery/08.jpg"alt="Casa dos Maias" >
+            </div>
+        </section>
+        <div class="event-section">
+            <div class="image-stack">
+                <img src="http://www.casadosmaias.com/images/gallery/02.jpg" class="img-large" alt="Evento 1">
+                <img src="http://www.casadosmaias.com/images/gallery/08.jpg" class="img-esquerda" alt="Evento 2">
+                <img src="http://www.casadosmaias.com/images/gallery/13.jpg" class="img-small" alt="Evento 3">
+            </div>
+            <div class="event-info">
+                <div class="capacity">
+                        <h3>Capacidade Máxima</h3>
+                        <h2> <span>180</span> <h2>
+                    
+                </div>
+                <div class="event-types">
+                    <h3>TIPO DE EVENTOS</h3>
+                    <ul>
+                        <li>Casamentos</li>
+                        <li>Batizados</li>
+                        <li>Comunhões</li>
+                        <li>Aniversários</li>
+                        <li>Eventos Corporativos</li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <h3>SERVIÇOS COM PARCERIA</h3>
+                    <ul>
+                        <li>DJ (Música e Animação)</li>
+                        <li>Bolo</li>
+                        <li>Decoração</li>
+                        <li>Animação Infantil</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="opinions-container">
+            <!-- Caixa fixa de opinião -->
+            <div class="opinions-box">
+                <h2>OPINIÕES ACERCA DA CASA DOS MAIAS</h2>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>99% dos noivos recomendam*</p>
+                <small>*informação de casamentos.pt</small>
+                <button class="btn" ><a href="https://www.casamentos.pt/quintas-para-casamentos/casa-dos-maias-maia--e105653">Para mais opiniões.</a></button>
+            </div>
+           
+            <!-- Carrossel de Opiniões -->
+            <div class="opinions-slider" id="opinions-slider">
+                <div class="opinion active">
+                    <p><strong>Rui S.</strong> <br> Casado a 23/08/2022</p>
+                    <p>"A recordação que ficamos é de um lugar mágico saído de um livro de conto de fadas, simplesmente fantástico. Obrigado."</p>
+                </div>
+                <div class="opinion">
+                    <p><strong>João e Ana</strong> <br> Casaram-se a 15/06/2023</p>
+                    <p>"O espaço é maravilhoso, a organização foi incrível e tudo correu lindamente. Recomendamos muito!"</p>
+                </div>
+                <div class="opinion">
+                    <p><strong>Ricardo</strong> <br> Casou-se a 10/09/2022</p>
+                    <p>"Serviço excelente, lugar mágico e inesquecível! A melhor escolha que podíamos ter feito."</p>
+                </div>
+            </div>
+        </div>
+    
+        <section class="events">
+            <h2>OS NOSSOS EVENTOS</h2>
+            <p class="subtitle">"Tornamos o seu sonho realidade"</p>
+            <p class="description">Conheça a lista de eventos realizados no nosso espaço, assim como a estrutura completa dos serviços incluídos em cada um deles. Garantimos momentos únicos onde, juntamente com familiares, amigos e/ou colaboradores, desfrutarão de um dia inesquecível.</p>
+            <a class="btn" href="Eventos.html">CONHECER</a>
+        </section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>SIGA-NOS</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target ="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon">
+                
+                    <a href="https://wa.me/913877180" target ="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon">
+                
+                <a href="https://www.instagram.com/casa_dos_maias_/" target ="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="instagram" class="icon">
+                
+            </div>
+            <p><a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
+            <p><em>Casa dos Maias:</em><br>
+            <a href="tel:913877180">913877180</a>
+            
+        </div>
+
+        <div class="footer-section">
+            <h2>Casa dos maias</h2>
+            <img src="data:image/jpeg;base64,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" alt="Logo Casa dos maias">
+        </div>
+
+        <div class="footer-section">
+            <ul>
+                <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
+                <li><a href="politicaDePrivacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+            
+            </ul>
+            </div>
+        </footer>
+
+</body>
+</html>
