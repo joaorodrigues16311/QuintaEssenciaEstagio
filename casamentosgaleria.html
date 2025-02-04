@@ -78,6 +78,36 @@ body {
     .nav li:hover .submenu {
         display: block;
 }
+.gallery-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 28px;
+            color: #c27a48;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+}
 footer {
     text-align: center;
      padding: 20px;
@@ -175,6 +205,16 @@ footer {
             </ul>
         </div>
     </header>
+    <section class="gallery-container">
+        <h2 class="gallery-title">Momentos Inesquecíveis</h2>
+        <div class="gallery">
+            <img loading="lazy" decoding="async" src="https://quintadascarpas.com/wp-content/uploads/2020/12/250-scaled-1000x1250.jpg" alt="" width="1000" height="1250">
+            <img src="source/img.pag2.1/img3.jpg" alt="Casamento 2">
+            <img src="source/img.pag2.1/img4.jpg" alt="Casamento 3">
+            <img src="source/img.pag2/img9.jpg" alt="Casamento 4">
+            <img src="source/img.pag2/img10.jpg" alt="Casamento 5">
+        </div>
+    </section>
     <footer>
         <div class="footer-container">
             <div class="footer-section">
