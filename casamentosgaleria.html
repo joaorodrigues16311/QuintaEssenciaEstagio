@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CASA DOS MAIAS - Casamentos</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    background: #f8f8f8;
+}
+
+
+.nav-container {
+    position: fixed;    /* Fixa o menu no topo da página, ele não se move ao rolar */
+    top: 0;     /* Mantém a barra no topo da página */
+    left: 0;    /* Alinha a barra à esquerda da tela */
+    width: 100%;    /* Faz com que a barra ocupe toda a largura da tela */
+    display: flex;  /* Usa Flexbox para alinhar os elementos dentro da barra */
+    justify-content: space-between;     /* Distribui os itens: um na esquerda e outro na direita */
+    align-items: center;    /* Centraliza os itens verticalmente */
+    background: white;  /* Define o fundo da barra como branco */
+    padding: 20px 50px; /* Adiciona espaço interno: 20px acima/abaixo e 50px nas laterais */
+    z-index: 1000;  /* Garante que a barra fique sobre outros elementos da página */
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   /* Adiciona uma leve sombra para destacar a barra */
+}
+
+    .logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .nav {
+        display: flex;
+        flex-grow: 1;  
+        justify-content: center; 
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav a:hover {
+        color: #c27a48;
+    }
+.submenu {
+        display: none;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+    .nav li:hover .submenu {
+        display: block;
+}
+footer {
+    text-align: center;
+     padding: 20px;
+     background-color: #f1f1f1;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s;
+    }
+    .icon:hover {
+        transform: scale(1.1);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    ul li a:hover {
+        color: #333;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+    }
+
+    .footer-section h3, .footer-section h2 {
+        font-family: serif;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-size: 18px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+        color: #333;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="nav-container" id="navbar">
+            <img class="logo" src="source/img/img2.jpg" alt="Quinta das Carpas Logo">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="Sobre.html">Sobre</a>
+                    <ul class="submenu">
+                        <li><a href="SobreAquinta.html">A Quinta</a></li>
+                        <li><a href="Aequipa.html">Serviços & Capacidade</a></li>
+                    </ul>
+                </li>
+                <li><a href="Eventos.html">Eventos</a></li>
+                <li>
+                    <a href="portofolio.html">Portofólio</a>
+                    <ul class="submenu">
+                        <li><a href="PortofolioSobreAquinta.html">Quinta</a></li>
+                        <li><a href="PortofolioSobreOsMomentos.html">Momentos</a></li>
+                        <li><a href="PortofolioSobreDecoraçãoeAmbientes.html">Decoração & Ambiente</a></li>
+                        <li><a href="PortofolioViedos.html">Vídeos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </header>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SIGA-NOS</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target ="_blank">
+                    <img src="source/img.icons/facebook.png" alt="Facebook" class="icon">
+                    
+                        <a href="https://wa.me/913877180" target ="_blank">
+                    <img src="source/img.icons/whatsaap.png" alt="WhatsApp" class="icon">
+                    
+                    <a href="https://www.instagram.com/casa_dos_maias_/" target ="_blank">
+                    <img src="source/img.icons/Instagram.png" alt="instagram" class="icon">
+                    
+                </div>
+                <p><a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
+                <p><em>Casa dos Maias:</em><br>
+                <a href="tel:913877180">913877180</a>
+                
+            </div>
+    
+            <div class="footer-section">
+                <h2>Casa dos maias</h2>
+                <img src="source/img/img7.jpg" alt="Logo Casa dos maias">
+            </div>
+    
+            <div class="footer-section">
+                <ul>
+                    <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
+                    <li><a href="politicaDePrivacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+                
+                </ul>
+            </footer>
+        </body>
+        </html>    
