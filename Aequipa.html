@@ -268,7 +268,7 @@ body {
             max-width: 800px;
             margin: 20px auto;
         }
-        .btn {
+        .events-btn {
             display: inline-block;
             background-color: #B8A389;
             color: white;
@@ -278,70 +278,80 @@ body {
             font-size: 16px;
             cursor: pointer;
             transition: background 0.3s;
+            text-decoration:solid;
         }
-        .btn:hover {
+        .events.btn a{
+            text-decoration: none; 
+            color: white; 
+            font-style: italic; 
+        }
+        .btn a:hover {
             background-color: #8B6F4E;
         }
-        .opinions-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            margin: 50px auto;
-            max-width: 1000px;
+.opinions-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1000px;
         }
 
-        .opinions-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 300px;
+    .opinions-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
         }
 
-        .stars {
-            font-size: 20px;
-            color: gold;
+    .stars {
+        font-size: 20px;
+        color: gold;
         }
 
-        .btn {
-            background: #c4a47c;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background 0.3s;
-            color: white;
+    .btn {
+        background: #c4a47c;
+        text-align: right;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+        color: white;
+        }
+    .btn a {
+        text-decoration: none; 
+        color: #292724; 
+        font-style: italic; 
         }
 
-        .btn:hover {
-            background: #a0815e;
+    .btn:hover {
+        background: #a0815e;
+        }
+    .opinions-slider {
+        width: 400px;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
         }
 
-        /* Carrossel de opiniões */
-        .opinions-slider {
-            width: 400px;
-            height: 150px;
-            overflow: hidden;
-            position: relative;
+    .opinion {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 100%;
+        transition: opacity 0.5s;
+        opacity: 0;
+        text-align: left;
         }
 
-        .opinion {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            position: absolute;
-            width: 100%;
-            transition: opacity 0.5s;
-            opacity: 0;
-            text-align: left;
-        }
-
-        .opinion.active {
-            opacity: 1;
+    .opinion.active {
+        opacity: 1;
 }
 
 footer {
@@ -591,7 +601,7 @@ footer {
                 <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p>99% dos noivos recomendam*</p>
                 <small>*informação de casamentos.pt</small>
-                <button class="btn" ><a href="https://www.casamentos.pt/quintas-para-casamentos/casa-dos-maias-maia--e105653">Para mais opiniões.</a></button>
+                <button class="btn" ><a href="https://www.casamentos.pt/quintas-para-casamentos/casa-dos-maias-maia--e105653">Para mais opiniões</a></button>
             </div>
            
             <!-- Carrossel de Opiniões -->
@@ -615,13 +625,13 @@ footer {
             <h2>OS NOSSOS EVENTOS</h2>
             <p class="subtitle">"Tornamos o seu sonho realidade"</p>
             <p class="description">Conheça a lista de eventos realizados no nosso espaço, assim como a estrutura completa dos serviços incluídos em cada um deles. Garantimos momentos únicos onde, juntamente com familiares, amigos e/ou colaboradores, desfrutarão de um dia inesquecível.</p>
-            <a class="btn" href="Eventos.html">CONHECER</a>
+            <a class="events-btn" href="Eventos.html">CONHECER</a>
         </section>
 
         <footer>
             <div class="footer-container">
                 
-                <!-- CONTACTOS - Esquerda -->
+            
                 <div class="footer-contactos">
                     <h1> CONTACTE-NOS</h1>
                     <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
