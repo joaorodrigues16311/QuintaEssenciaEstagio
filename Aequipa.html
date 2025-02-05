@@ -78,6 +78,23 @@ body {
     .nav li:hover .submenu {
         display: block;
     }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    ul li a:hover {
+        color: #333;
+}
 
 .conteudo {
     display: flex;
@@ -326,101 +343,139 @@ body {
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    }
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    .icon {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s;
-    }
-    .icon:hover {
-        transform: scale(1.1);
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+            background-color:  #f1f1f1;
+            padding: 40px 20px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
 
-    ul li {
-        margin: 5px 0;
-    }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    ul li a {
-        text-decoration: none;
-        color: #666;
-    }
+        /* ESTILO DOS CONTACTOS */
+        .footer-contactos {
+            flex: 1;
+            min-width: 250px;
+        }
 
-    ul li a:hover {
-        color: #333;
-    }
+        .footer-contactos h1 {
+            font-size: 20px;
+            color: #c27a48;
+            margin-bottom: 10px;
+        }
 
-    .footer-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-    }
+        .footer-contactos p, .footer-contactos a {
+            color: #555;
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
 
-    .footer-section {
-        flex: 1;
-        min-width: 250px;
-        margin: 10px;
-    }
+        .footer-contactos a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
 
-    .footer-section h3, .footer-section h2 {
-        font-family: serif;
-        font-size: 18px;
-        margin-bottom: 10px;
-        color:#c27a48;
-    }
-    .footer-section p, .footer-section a{
-        color: #7a7777;
-        font-weight: bold;
-        font-style: italic;
-        text-decoration: none;
+        /* ESTILO DAS REDES SOCIAIS */
+        .footer-social {
+            flex: 1;
+            text-align: center;
+        }
 
-    }
+        .footer-social h3 {
+            font-size: 20px;
+            color: #c27a48;
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
     
+        .footer-logo {
+            flex: 1;
+            text-align: right;
+            min-width: 250px;
+        }
 
-    .footer-section a:hover{
-        color: #000;
-    }
+        .footer-logo img {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 15px;
+        }
 
-    .social-icons a {
-        margin: 0 5px;
-        font-size: 18px;
-        color: #000000;
-        text-decoration: none;
-    }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        text-align: right;
+        }
 
-    .social-icons a:hover {
-        color: #333;
-    }
-    .footer-credit {
-        margin-top: 15px;
-        font-size: 14px;
-        color: #777;
-        font-style: italic;
-    }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
 
-    .footer-credit a {
-        color: #7a7777;
-        font-weight: bold;
-        text-decoration: none;
-    }
+        .footer-links a {
+            color: #7a7777;
+            font-size: 16px;
+            text-decoration: none;
+        }
 
-    .footer-credit a:hover {
-        color: #000;
+        .footer-links a:hover {
+            color: #000;
+        }
+        .footer-credit {
+            font-size: 12px; /* Menor tamanho de fonte */
+            color: #777;
+            font-style: italic;
+            margin-top: 5px; /* Reduzi a margem superior para ficar mais perto dos links */
+            text-align: right;
+        }
+
+        .footer-credit a {
+            color: #7a7777;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        .footer-credit a:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-contactos, .footer-social, .footer-logo {
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-top: 20px;
+            }
 }
 </style>
 </head>
@@ -558,39 +613,46 @@ footer {
 
         <footer>
             <div class="footer-container">
-                <div class="footer-section">
-                    <h3>SIGA-NOS</h3>
+                
+                <!-- CONTACTOS - Esquerda -->
+                <div class="footer-contactos">
+                    <h1>📞 CONTACTE-NOS</h1>
+                    <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
+                    <p> &nbsp;</p>
+                    <p><strong>Localização:</strong><br>Via Eng. Belmiro Mendes Azevedo, 4475 Maia</p>
+                    <p> &nbsp;</p>
+                    <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
+                </div>
+        
+                <!-- REDES SOCIAIS - Centro -->
+                <div class="footer-social">
+                    <h3>🌍 SIGA-NOS</h3>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target ="_blank">
-                        <img src="source/img.icons/facebook.png" alt="Facebook" class="icon">
-                        
-                            <a href="https://wa.me/913877180" target ="_blank">
-                        <img src="source/img.icons/whatsaap.png" alt="WhatsApp" class="icon">
-                        
-                        <a href="https://www.instagram.com/casa_dos_maias_/" target ="_blank">
-                        <img src="source/img.icons/Instagram.png" alt="instagram" class="icon">
-                        
+                        <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target="_blank">
+                            <img src="source/img.icons/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://web.whatsapp.com/send?phone=351913877180" target="_blank">
+                            <img src="source/img.icons/whatsaap.png" alt="WhatsApp">
+                        </a>
+                        <a href="https://www.instagram.com/casa_dos_maias_/" target="_blank">
+                            <img src="source/img.icons/Instagram.png" alt="Instagram">
+                        </a>
                     </div>
-                    <p> &nbsp;</p>
-                    <p><a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
-                    <p> &nbsp;</p>
-                    <h2><strong>Casa dos Maias:</strong> <p><a href="tel:913877180">913877180</a></p></h2>
-                    
                 </div>
         
-                <div class="footer-section">
-                    <h2>Casa dos Maias</h2>
-                    <img src="source/img/img7.jpg" alt="Logo Casa dos maias">
-                </div>
-        
-                <div class="footer-section">
-                    <ul>
+                <!-- LOGO + LINKS - Direita -->
+                <div class="footer-logo">
+                    <a href="Sobre.html">
+                        <img src="source/img/img3.png" alt="Logo Casa dos Maias">
+                    </a>
+                    <ul class="footer-links">
                         <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
                         <li><a href="politicaDePrivacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
-                        <p class="footer-credit">Desenvolvido por: <a href="mailto:joaorodrigues16319@gmail.com">joaorodrigues16319@gmail.com</a></p>
-                    
                     </ul>
-                </footer>
+                    <p class="footer-credit">Desenvolvido por: <a href="mailto:joaorodrigues16319@gmail.com">joaorodrigues16319@gmail.com</a></p>
+                </div>
+            </div>
+        </footer>
 
 </body>
 </html>
