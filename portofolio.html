@@ -1,37 +1,501 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção</title>
-    <style>
-        body {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portofolio - Casa dos Maias </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    background: #f8f8f8;
+}
+
+
+.nav-container {
+    position: fixed;    /* Fixa o menu no topo da página, ele não se move ao rolar */
+    top: 0;     /* Mantém a barra no topo da página */
+    left: 0;    /* Alinha a barra à esquerda da tela */
+    width: 100%;    /* Faz com que a barra ocupe toda a largura da tela */
+    display: flex;  /* Usa Flexbox para alinhar os elementos dentro da barra */
+    justify-content: space-between;     /* Distribui os itens: um na esquerda e outro na direita */
+    align-items: center;    /* Centraliza os itens verticalmente */
+    background: white;  /* Define o fundo da barra como branco */
+    padding: 20px 50px; /* Adiciona espaço interno: 20px acima/abaixo e 50px nas laterais */
+    z-index: 1000;  /* Garante que a barra fique sobre outros elementos da página */
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   /* Adiciona uma leve sombra para destacar a barra */
+}
+
+    .logo {
+        height: 60px;
+        width: 80px;
+    }
+
+    .nav {
+        display: flex;
+        flex-grow: 1;  
+        justify-content: center; 
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+        font-style:italic;
+    }
+
+    .nav a:hover {
+        color: #c27a48;
+    }
+.submenu {
+        display: none;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+    .nav li:hover .submenu {
+        display: block;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    ul li a:hover {
+        color: #333;
+}
+.gallery-container {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .gallery-title {
+        font-size: 40px;
+        font-style: italic;
+        color: #c27a48;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 300px; 
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .tall-image {
+        grid-row: span 2;
+        height: 590px; 
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .gallery-image:hover,
+    .tall-image:hover {
+        transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #c27a48;
+    }
+
+    .modal-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .modal-nav:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    #prevImage {
+        left: 10%;
+    }
+
+    #nextImage {
+        right: 10%;
+}
+footer {
+            background-color:  #f1f1f1;
+            padding: 40px 20px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ESTILO DOS CONTACTOS */
+        .footer-contactos {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-contactos h1 {
+            font-size: 20px;
+            color: #8B6F4E;
+            margin-bottom: 10px;
+        }
+
+         .footer-contactos a {
+            color: #555;
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
+        .footer-contactos p {
+            color: #5e4b35;
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        .footer-contactos a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        /* ESTILO DAS REDES SOCIAIS */
+        .footer-social {
+            flex: 1;
             text-align: center;
         }
-        .container {
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+
+        .footer-social h3 {
+            font-size: 20px;
+            color: #8B6F4E;
+            margin-bottom: 15px;
         }
-        h1 {
-            color: #ff9900;
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        p {
-            color: #333;
+
+        .social-icons a {
+            transition: transform 0.3s ease;
         }
-    </style>
+
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+    
+        .footer-logo {
+            flex: 1;
+            text-align: right;
+            min-width: 250px;
+        }
+
+        .footer-logo img {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        text-align: right;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #7a7777;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #000;
+        }
+        .footer-credit {
+            font-size: 12px; /* Menor tamanho de fonte */
+            color: #777;
+            font-style: italic;
+            margin-top: 5px; /* Reduzi a margem superior para ficar mais perto dos links */
+            text-align: right;
+        }
+
+        .footer-credit a {
+            color: #7a7777;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        .footer-credit a:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-contactos, .footer-social, .footer-logo {
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-top: 20px;
+            }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Ainda estamos em construção 🚧</h1>
-        <p>Aguarde... O futuro promete! 🚀</p>
-    </div>
-</body>
-</html>
+    
+    <header>
+        <div class="nav-container" id="navbar">
+            <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias Logo">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="Sobre.html">Sobre</a>
+                    <ul class="submenu">
+                        <li><a href="SobreAquinta.html">A Quinta</a></li>
+                        <li><a href="Aequipa.html">Serviços & Capacidade</a></li>
+                    </ul>
+                </li>
+                <li><a href="Eventos.html">Eventos</a></li>
+                <li>
+                    <a href="portofolio.html">Portofólio</a>
+                    <ul class="submenu">
+                        <li><a href="PortofolioSobreAquinta.html">Quinta</a></li>
+                        <li><a href="PortofolioSobreOsMomentos.html">Momentos</a></li>
+                        <li><a href="PortofolioSobreDecoraçãoeAmbientes.html">Decoração & Ambiente</a></li>
+                        <li><a href="PortofolioViedos.html">Vídeos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="gallery-container">
+        <h2 class="gallery-title">A QUINTA</h2>
+        <div class="gallery">
+            <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img2.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img3.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img9.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img5.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img6.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img7.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img8.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img4.jpg" class="tall-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img10.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img11.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img12.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img13.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img14.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img15.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img16.webp" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img16.webp" class="gallery-image" alt="A quinta">
+        </div>
+    
+        <!-- Modal --> 
+        <div id="imageModal" class="modal">
+            <span id="closeModal" class="close">&times;</span>
+            <span id="prevImage" class="modal-nav">&#10094;</span>
+            <img class="modal-content" id="modalImage">
+            <span id="nextImage" class="modal-nav">&#10095;</span>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            
+            <!-- CONTACTOS - Esquerda -->
+            <div class="footer-contactos">
+                <h1> CONTACTE-NOS</h1>
+                <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
+                <p> &nbsp;</p>
+                <p><strong>Localização:</strong><a href="https://www.google.pt/maps/place/Casa+Dos+Maias/@41.260146,-8.6258776,17z/data=!3m1!4b1!4m6!3m5!1s0xd246798628a9ca7:0x501798605192f7b5!8m2!3d41.260146!4d-8.6233027!16s%2Fg%2F11bwfm7s92?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D"> Eng. Belmiro Mendes Azevedo, 4475 Maia</a></p>
+                <p> &nbsp;</p>
+                <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
+            </div>
+    
+            <!-- REDES SOCIAIS - Centro -->
+            <div class="footer-social">
+                <h3> SIGA-NOS</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target="_blank">
+                        <img src="source/img.icons/img3face.png" alt="Facebook">
+                    </a>
+                    <a href="https://web.whatsapp.com/send?phone=351913877180" target="_blank">
+                        <img src="source/img.icons/img1whats.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/casa_dos_maias_/" target="_blank">
+                        <img src="source/img.icons/img2insta.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- LOGO + LINKS - Direita -->
+            <div class="footer-logo">
+                <a href="eventoscorporativosgaleria.html">
+                    <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
+                </a>
+                <ul class="footer-links">
+                    <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
+                    <li><a href="politicaDePrivacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+                </ul>
+                <p class="footer-credit">Desenvolvido por: <a href="mailto:joaorodrigues16319@gmail.com">João Rodrigues</a></p>
+            </div>
+        </div>
+    </footer>
+            
+        
+            <script>
+                const modal = document.getElementById("imageModal");
+                const modalImg = document.getElementById("modalImage");
+                const closeBtn = document.getElementById("closeModal");
+                const prevBtn = document.getElementById("prevImage");
+                const nextBtn = document.getElementById("nextImage");
+            
+                const images = document.querySelectorAll(".gallery-image, .tall-image");
+                let currentIndex = 0;
+            
+                function openModal(index) {
+                    modal.style.display = "flex";
+                    modalImg.src = images[index].src;
+                    currentIndex = index;
+                }
+            
+                images.forEach((img, index) => {
+                    img.addEventListener("click", () => openModal(index));
+                });
+            
+                closeBtn.addEventListener("click", () => {
+                    modal.style.display = "none";
+                });
+            
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            
+                function changeImage(direction) {
+                    currentIndex += direction;
+                    if (currentIndex < 0) {
+                        currentIndex = images.length - 1;
+                    } else if (currentIndex >= images.length) {
+                        currentIndex = 0;
+                    }
+                    openModal(currentIndex);
+                }
+            
+                prevBtn.addEventListener("click", () => changeImage(-1));
+                nextBtn.addEventListener("click", () => changeImage(1));
+            
+                document.addEventListener("keydown", (e) => {
+                    if (modal.style.display === "flex") {
+                        if (e.key === "ArrowLeft") {
+                            changeImage(-1);
+                        } else if (e.key === "ArrowRight") {
+                            changeImage(1);
+                        } else if (e.key === "Escape") {
+                            modal.style.display = "none";
+                        }
+                    }
+                });
+            </script>  
+        </body>
+        </html>    
