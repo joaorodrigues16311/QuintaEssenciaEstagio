@@ -413,6 +413,72 @@ footer {
                 margin-top: 20px;
             }
 }
+@media (max-width: 768px) {
+    .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 9999; /* Garante que fique acima de tudo */
+}
+
+    .nav a {
+        color: black;
+        padding: 15px;
+        display: block;
+    }
+
+    .menu-toggle {
+    display: block !important;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10000;
+}
+}
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh; /* Reduz a altura */
+        padding: 20px;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    .hero img {
+        width: 250px; 
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 90%; /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .video-container {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contactos, .footer-social, .footer-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
     </style>
     <script>
         window.addEventListener('scroll', function() {
@@ -429,6 +495,14 @@ footer {
     let video = document.getElementById('youtubeVideo');
     video.src += "&autoplay=1"; 
 }
+function toggleMenu() {
+    var nav = document.querySelector('.nav');
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "block";
+    } else {
+        nav.style.display = "none";
+    }
+}
     </script>
 
 
@@ -439,6 +513,7 @@ footer {
 <body>
     <header>
         <div class="nav-container" id="navbar">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias">
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
