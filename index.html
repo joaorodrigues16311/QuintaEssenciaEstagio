@@ -535,7 +535,44 @@ footer {
         position: fixed;
         background: white; /* Mantém a transparência ao rolar */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1003;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
     }
+
+    .scrolled .logo {
+        height: 40px; 
+        width: 80px;
+    }
+
+    .scrolled .nav {
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .scrolled .nav.active {
+        display: flex;
+    }
+
+    .scrolled .nav a {
+        color: black !important;
+    }
+    
 }
 
 /* No desktop, esconde o botão */
@@ -595,10 +632,10 @@ footer {
     <script>
         window.addEventListener('scroll', function() {
             var nav = document.querySelector('.nav-container');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
+            if (window.scrollY > 100) { 
+            nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('scrolled');
+            nav.classList.remove('scrolled');
             }
         });
         
@@ -606,6 +643,11 @@ footer {
     document.getElementById('videoOverlay').style.display = 'none';
     let video = document.getElementById('youtubeVideo');
     video.src += "&autoplay=1"; 
+}
+
+function toggleMenu() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("active");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -650,7 +692,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </header> 
-</head>
+            <button class="menu-toggle">☰</button>
 <body>
     <header>
         <div class="nav-container" id="navbar">
