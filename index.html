@@ -70,7 +70,7 @@ body, html {
         padding: 10px;
         font-size: 16px;
         transition: color 0.3s;
-        font-style:italic;
+        font-style: italic;
 }
 .submenu {
     display: none;
@@ -414,29 +414,134 @@ footer {
             }
 }
 @media (max-width: 768px) {
-    .nav {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: white;
-    z-index: 9999; /* Garante que fique acima de tudo */
-}
-
-    .nav a {
-        color: black;
-        padding: 15px;
+    .menu-toggle {
         display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 10003;
+        background: #F4C485;
+        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
+        border-radius: 50%; /* Torna o botão circular */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
     }
 
-    .menu-toggle {
-    display: block !important;
+    .menu-toggle:hover {
+        background: #e0b374; /* Escurece um pouco a cor ao passar o mouse */
+        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+    }
+
+    .nav-container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.9); /* Torna o fundo ligeiramente transparente */
+        z-index: 10001;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.3s ease; /* Suaviza a transição de fundo */
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu */
+        width: 100%; /* Reduz a largura para dar um pouco de margem */
+        margin: 0 auto; /* Centraliza o menu */
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; /* Aumenta o arredondamento dos cantos */
+        overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
+        border-bottom: 1px solid #e1e1e1;
+        padding:  0; /* Reduz o espaçamento interno */
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        color: #333; /* Usa um tom de cinza mais suave para o texto */
+        font-size: 17px;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0;
+        width: 100%;
+        text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease; 
+    }
+    .nav ul {
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        list-style: none;
+        font-size: 17px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 0;
+         margin: 0;
+    }
+
+    .nav li {
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 400;
+        margin: 0;
+        position: relative;
+        padding: 3px 10px; /* Reduzindo o espaçamento vertical e horizontal */
+        text-align: left; /* Alinha o texto à esquerda */
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .nav li:last-child {
+        border-bottom: none; /* Remove a linha do último item */
+    }
+
+    .nav a:hover {
+        background: #F4C485;
+        color: white;
+    }
+    .submenu {
+    display: none;
     position: absolute;
-    top: 10px;
-    right: 20px;
-    z-index: 10000;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+     }
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        font-style: italic;
+        transition: color 0.3s;
+        }
+    .scrolled {
+        position: fixed;
+        background: white; /* Mantém a transparência ao rolar */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 }
+
+/* No desktop, esconde o botão */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
 }
+
 @media (max-width: 768px) {
     .hero {
         height: 70vh; /* Reduz a altura */
@@ -452,6 +557,7 @@ footer {
         height: auto;
     }
 }
+
 @media (max-width: 768px) {
     .gallery {
         flex-direction: column;
@@ -463,11 +569,13 @@ footer {
         height: auto;
     }
 }
+
 @media (max-width: 768px) {
     .video-container {
         width: 90%;
     }
 }
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -479,6 +587,7 @@ footer {
         margin-bottom: 20px;
     }
 }
+
     </style>
     <script>
         window.addEventListener('scroll', function() {
@@ -495,14 +604,43 @@ footer {
     let video = document.getElementById('youtubeVideo');
     video.src += "&autoplay=1"; 
 }
-function toggleMenu() {
-    var nav = document.querySelector('.nav');
-    if (nav.style.display === "none" || nav.style.display === "") {
-        nav.style.display = "block";
-    } else {
-        nav.style.display = "none";
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    const navContainer = document.querySelector(".nav-container");
+
+    // Garante que o botão sempre aparece
+    if (menuToggle) {
+        menuToggle.style.display = "block";
+
+        // Adiciona evento de clique para abrir e fechar o menu
+        menuToggle.addEventListener("click", function () {
+            nav.classList.toggle("active");
+
+            // Alterna a classe 'open' no botão para indicar o estado do menu
+            menuToggle.classList.toggle("open");
+        });
     }
-}
+
+    // Adiciona ou remove a classe "scrolled" ao nav-container conforme o scroll
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navContainer.classList.add("scrolled");
+        } else {
+            navContainer.classList.remove("scrolled");
+        }
+    });
+
+    // Fecha o menu ao clicar fora dele
+    document.addEventListener("click", function (event) {
+        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+            nav.classList.remove("active");
+            menuToggle.classList.remove("open");
+        }
+    });
+});
+        
     </script>
 
 
@@ -513,8 +651,8 @@ function toggleMenu() {
 <body>
     <header>
         <div class="nav-container" id="navbar">
-        
             <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
                 <li>
