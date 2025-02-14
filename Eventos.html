@@ -508,6 +508,44 @@ footer {
     }
 }
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .image-container, .text-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .text-container h1 {
+        font-size: 28px;
+    }
+
+    .text-container em {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+
+    .events-section {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .event-section-card {
+        width: 100%;
+    }
+
+    .event-section-card img {
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -609,6 +647,7 @@ footer {
             <div class="breadcrumb"><a href="index.html">Home</a> / Eventos</div>
         </div>
     </div>
+
 
     <section class="events-section">
         <a href="eventos-casamentos.html" class="event-section-link">
