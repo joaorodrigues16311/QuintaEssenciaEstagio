@@ -34,13 +34,14 @@
 }
 
 .logo {
-    height: 60px;
+    height: 40px;
     width: 80px;
 }
 
 .nav {
     display: flex;
-    flex-grow: 1;  
+    flex-grow: 1; 
+     
     justify-content: center; 
     gap: 40px;
     list-style: none;
@@ -80,34 +81,34 @@
             display: block;
         }
         ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 5px 0;
-        }
-
-        ul li a {
-            text-decoration: none;
-            color: #666;
-        }
-
-        ul li a:hover {
-            color: #333;
-        }
-    
-    
- .banner {
-    background: url('source/img.pag2.1/img5.jpg') center/cover no-repeat;
-    height: 250px;
-    display: flex;  
-    justify-content: space-between; 
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 50px; /* Ajusta espaçamento nas laterais */
-    color: white;
-    position: relative;
+        list-style: none;
+        padding: 0;
     }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    ul li a:hover {
+        color: #333;
+    }
+    
+    
+    .banner {
+        background: url('source/img.pag2.1/img5.jpg') center/cover no-repeat;
+        height: 250px;
+        display: flex;  
+        justify-content: space-between; 
+        align-items: center; /* Centraliza verticalmente */
+        padding: 0 50px; /* Ajusta espaçamento nas laterais */
+        color: white;
+        position: relative;
+}
 
     .titulo {
         font-size: 24px; /* Ajuste do tamanho */
@@ -118,7 +119,7 @@
         left:100px; /* Mantém o título na esquerda */
         top: 70%; 
         transform: translateY(-50%); /* Centraliza verticalmente */
-    }
+}
     .historiaehome {
         position: absolute;
         bottom: 60px; /* Distância da parte inferior */
@@ -127,53 +128,53 @@
         font-size: 14px;
         font-style: italic;
         color: white;
-    }
+}
     .historiaehome {
         font-size: 14px;
         font-style: italic;
         color: white;
-    }
+}
     .historiaehome a {
         text-decoration: none;
         color: white;
-    } 
+} 
     /* Conteúdo */
-.conteudo {
+    .conteudo {
     display: flex; /* Ativa Flexbox */
     align-items: center; /* Centraliza verticalmente */
     justify-content: space-between; /* Mantém o texto e a imagem separados */
     max-width: 1200px; /* Define a largura máxima */
     margin: 50px auto; /* Centraliza a seção na página */
     padding: 20px;
-    }
+}
 
-    .texto {
-        width: 50%; /* Define que o texto ocupe metade do espaço */
-        text-align: center; /* Centraliza o texto */
-        margin-right: 50px;
-    }
+.texto {
+    width: 50%; /* Define que o texto ocupe metade do espaço */
+    text-align: center; /* Centraliza o texto */
+    margin-right: 50px;
+}
 
-    .texto h2 {
-        font-size: 28px;
-        color: #c19a6b; /* Cor parecida com a da imagem */
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+.texto h2 {
+    font-size: 28px;
+    color: #c19a6b; /* Cor parecida com a da imagem */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-    .texto p {
-        font-size: 18px;
-        color: #333;
-        line-height: 1.6;
-    }
+.texto p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
 
-    .imagem {
-        width: 50%; /* A imagem ocupa metade do espaço */
-    }
+.imagem {
+    width: 50%; /* A imagem ocupa metade do espaço */
+}
 
-    .imagem img {
-        width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
-        border-radius: 5px; /* Borda arredondada opcional */
-    }
+.imagem img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
+    border-radius: 5px; /* Borda arredondada opcional */
+}
 .conteudo {
     display: flex;
     align-items: center;
@@ -182,63 +183,63 @@
     margin: 50px auto;
     padding: 20px;
     gap: 40px; /* Afastar texto da imagem */
-    }
+}
 
-    .texto {
-        max-width: 50%;
-        text-align: center;
-    }
+.texto {
+    max-width: 50%;
+    text-align: center;
+}
 
-    .texto h2 {
-        font-size: 28px;
-        color: #8B6F4E;
-        font-weight: bold;
-    }
+.texto h2 {
+    font-size: 28px;
+    color: #8B6F4E;
+    font-weight: bold;
+}
 
-    .texto p {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #555;
-    }
+.texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
 
-    .imagensnext {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
+.imagensnext {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
-    .imagensnext-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+.imagensnext-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
-    .slide {
-        display: none;
-        width: 100%;
-    }
+.slide {
+    display: none;
+    width: 100%;
+}
 
-    .slide.ativo {
-        display: block;
-    }
+.slide.ativo {
+    display: block;
+}
 
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     font-size: 24px;
-    }
+}
 
-    .prev {
-        left: 10px;
-    }
+.prev {
+    left: 10px;
+}
 
-    .next {
-        right: 10px;
+.next {
+    right: 10px;
 }
 footer {
             background-color:  #f1f1f1;
@@ -381,7 +382,240 @@ footer {
                 margin-top: 20px;
             }
 }
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 10003;
+        background: white;
+        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
+        border-radius: 50%; /* Torna o botão circular */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
+    }
 
+    .menu-toggle:hover {
+        background: white; /* Escurece um pouco a cor ao passar o mouse */
+        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+    }
+    .nav-container {
+        position: fixed;
+        background: white; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1003;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    .nav {
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        color: #333; /* Usa um tom de cinza mais suave para o texto */
+        font-size: 17px;
+        text-align:left;
+        padding: 5px 10px;
+        margin: 0;
+        width: 100%;
+        text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease; 
+    }
+    .nav ul {
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        list-style: none;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav li {
+        margin: 0;
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        font-size: 17px;
+        line-height: 09px;
+        font-weight: 200px;
+        position: relative;
+        padding: 2px 05px; /* Reduzindo o espaçamento vertical e horizontal */
+        text-align: left; /* Alinha o texto à esquerda */
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .nav li:last-child {
+        border-bottom: none; /* Remove a linha do último item */
+    }
+
+    .nav a:hover {
+        color: #8B6F4E;
+    }
+    .submenu {
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.95); 
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); 
+    }
+
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        font-style: italic;
+        transition: color 0.3s, background 0.3s; 
+        display: block; 
+        border-radius: 5px; 
+    }
+
+    .submenu a:hover {
+        background: rgba(0, 0, 0, 0.1); 
+        color: rgb(0, 0, 0); 
+    }
+}
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .banner {
+        height: 150px; 
+        padding: 0 20px; 
+    }
+
+    .titulo {
+        font-size: 18px; 
+        left: 154px; 
+        top: 55%; 
+        transform: translateY(-50%);
+    }
+
+    .historiaehome {
+        bottom: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px; 
+    }
+
+    .conteudo {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+        width: 100%; 
+    }
+
+    .texto {
+        width: 100%; 
+        align-items: center; 
+        margin: 0 0 20px 0; 
+    }
+
+    .imagem {
+        width: 100%; 
+    }
+
+    .imagensnext {
+        width: 100%; 
+    }
+
+    .prev, .next {
+        top: 50%; 
+        padding: 5px; 
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+    }
+
+    .footer-social {
+        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%; /* Ocupa toda a largura no mobile */
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-contactos {
+        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-logo {
+        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-links {
+        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        text-align: center;
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; /* Aumenta a margem superior */
+    }
+
+    .footer-credit {
+        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; /* Aumenta a margem superior */
+        width: 100%; /* Garante que ocupa toda a largura */
+        text-align: center;
+    }
+}
 </style>
 </head>
 <script>
@@ -404,13 +638,19 @@ footer {
     document.querySelector(".prev").addEventListener("click", () => mudarSlide(-1));
     document.querySelector(".next").addEventListener("click", () => mudarSlide(1));
 });
+function toggleMenu() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("active");
+}
+       
 </script>
 <body>
 
     
     <header>
         <div class="nav-container" id="navbar">
-            <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias">
+            <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias Logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
                 <li>
