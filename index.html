@@ -515,13 +515,24 @@ footer {
         color: white;
     }
     .submenu {
-    display: none;
-    position: absolute;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-     }
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 8px; /* More rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        opacity: 0;
+        transform: translateY(10px); /* Slightly move down */
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); /* Move back to original position */
+    }
+
     .submenu a {
         color: rgb(73, 67, 67);
         text-decoration: none;
@@ -529,8 +540,15 @@ footer {
         padding: 10px;
         font-size: 16px;
         font-style: italic;
-        transition: color 0.3s;
-        }
+        transition: color 0.3s, background 0.3s; /* Smooth transition for color and background */
+        display: block; /* Ensure full clickable area */
+        border-radius: 5px; /* Rounded corners for links */
+    }
+
+    .submenu a:hover {
+        background: rgba(0, 0, 0, 0.1); /* Light background on hover */
+        color: rgb(0, 0, 0); /* Darker text color on hover */
+    }
     .scrolled {
         position: fixed;
         background: white; /* Mantém a transparência ao rolar */
