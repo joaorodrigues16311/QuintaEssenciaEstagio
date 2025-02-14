@@ -338,6 +338,299 @@ footer {
                 margin-top: 20px;
             }
 }
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 10003;
+        background: white;
+        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
+        border-radius: 50%; /* Torna o botão circular */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
+    }
+
+    .menu-toggle:hover {
+        background: white; /* Escurece um pouco a cor ao passar o mouse */
+        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+    }
+    .nav-container {
+        position: fixed;
+        background: white; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1003;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    .nav {
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        color: #333; /* Usa um tom de cinza mais suave para o texto */
+        font-size: 17px;
+        text-align:left;
+        padding: 5px 10px;
+        margin: 0;
+        width: 100%;
+        text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease; 
+    }
+    .nav ul {
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        list-style: none;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav li {
+        margin: 0;
+        position: relative;
+        font-style: italic;
+        font-family: "Cormorant Garamond",serif;
+        font-size: 17px;
+        line-height: 09px;
+        font-weight: 200px;
+        position: relative;
+        padding: 2px 05px; /* Reduzindo o espaçamento vertical e horizontal */
+        text-align: left; /* Alinha o texto à esquerda */
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .nav li:last-child {
+        border-bottom: none; /* Remove a linha do último item */
+    }
+
+    .nav a:hover {
+        color: #8B6F4E;
+    }
+    .submenu {
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.95); 
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); 
+    }
+
+    .submenu a {
+        color: rgb(73, 67, 67);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 16px;
+        font-style: italic;
+        transition: color 0.3s, background 0.3s; 
+        display: block; 
+        border-radius: 5px; 
+    }
+
+    .submenu a:hover {
+        background: rgba(0, 0, 0, 0.1); 
+        color: rgb(0, 0, 0); 
+    }
+}
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+@media (max-width: 768px){
+    .gallery-container {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .gallery-title {
+        font-size: 40px;
+        font-style: italic;
+        color: #8B6F4E;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        align-items: center;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 300px; 
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .tall-image {
+        width: 100%;
+        height: 300px; 
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-image:hover,
+    .tall-image:hover {
+        transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px; /* Adiciona padding para evitar que o conteúdo encoste nas bordas */
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px; /* Ajusta a posição para dispositivos móveis */
+    right: 20px; /* Ajusta a posição para dispositivos móveis */
+    font-size: 30px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #c27a48;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 45%; /* Ajusta a posição para dispositivos móveis */
+    transform: translateY(-50%);
+    font-size: 30px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#prevImage {
+    top:50%;
+    left: 5%; /* Ajusta a posição para dispositivos móveis */
+}
+
+#nextImage {
+    top:50%;
+    right: 5%; /* Ajusta a posição para dispositivos móveis */
+}
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+    }
+
+    .footer-social {
+        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%; /* Ocupa toda a largura no mobile */
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-contactos {
+        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-logo {
+        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+    }
+
+    .footer-links {
+        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        text-align: center;
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; /* Aumenta a margem superior */
+    }
+
+    .footer-credit {
+        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; /* Aumenta a margem superior */
+        width: 100%; /* Garante que ocupa toda a largura */
+        text-align: center;
+    }
+}
 </style>
 </head>
 <body>
@@ -345,6 +638,7 @@ footer {
     <header>
         <div class="nav-container" id="navbar">
             <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias Logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
                 <li>
@@ -489,6 +783,10 @@ footer {
                         }
                     }
                 });
+                function toggleMenu() {
+                const nav = document.querySelector(".nav");
+                nav.classList.toggle("active");
+                }
             </script>  
         </body>
         </html>    
