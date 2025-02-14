@@ -455,12 +455,12 @@ footer {
         top: 60px; /* Ajusta a posição do menu */
         width: 100%; /* Reduz a largura para dar um pouco de margem */
         margin: 0 auto; /* Centraliza o menu */
-        background: white;
+        background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px; /* Aumenta o arredondamento dos cantos */
         overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
         border-bottom: 1px solid #e1e1e1;
-        gap:20px;
+        gap: 20px;
     }
 
     .nav.active {
@@ -511,26 +511,25 @@ footer {
     }
 
     .nav a:hover {
-        background: #F4C485;
-        color: white;
+        color: #8B6F4E;
     }
     .submenu {
         display: none;
         position: absolute;
-        background: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+        background: rgba(255, 255, 255, 0.95); 
         color: rgb(0, 0, 0);
         padding: 10px;
-        border-radius: 8px; /* More rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
         opacity: 0;
-        transform: translateY(10px); /* Slightly move down */
+        transform: translateY(10px); 
     }
 
     .nav li:hover .submenu {
         display: block;
         opacity: 1;
-        transform: translateY(0); /* Move back to original position */
+        transform: translateY(0); 
     }
 
     .submenu a {
@@ -540,18 +539,18 @@ footer {
         padding: 10px;
         font-size: 16px;
         font-style: italic;
-        transition: color 0.3s, background 0.3s; /* Smooth transition for color and background */
-        display: block; /* Ensure full clickable area */
-        border-radius: 5px; /* Rounded corners for links */
+        transition: color 0.3s, background 0.3s; 
+        display: block; 
+        border-radius: 5px; 
     }
 
     .submenu a:hover {
-        background: rgba(0, 0, 0, 0.1); /* Light background on hover */
-        color: rgb(0, 0, 0); /* Darker text color on hover */
+        background: rgba(0, 0, 0, 0.1); 
+        color: rgb(0, 0, 0); 
     }
     .scrolled {
         position: fixed;
-        background: white; /* Mantém a transparência ao rolar */
+        background: white; 
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         top: 0;
         left: 0;
