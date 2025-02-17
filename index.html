@@ -42,7 +42,7 @@ body, html {
 
 .nav-container {
     position: absolute;
-    top: 0;
+    top: 04%;
     left: 0;
     width: 100%;
     display: flex;
@@ -52,25 +52,25 @@ body, html {
     padding: 10px 50px;
     z-index: 1000;
     transition: background 0.3s;
-    }
-    .nav {
-        display: flex;
-        gap: 40px; 
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); 
-    }
-    .nav a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
-        font-size: 16px;
-        transition: color 0.3s;
-        font-style: italic;
+}
+.nav {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-style: italic;
 }
 .submenu {
     display: none;
@@ -79,60 +79,59 @@ body, html {
     color: rgb(0, 0, 0);
     padding: 10px;
     border-radius: 5px;
-     }
-    .submenu a {
-        color: rgb(73, 67, 67);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
-        font-size: 16px;
-        font-style: italic;
-        transition: color 0.3s;
-        }
-    .nav li:hover .submenu {
-        display: block;
-    }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 5px 0;
-        }
-
-        ul li a {
-            text-decoration: none;
-            color: #666;
-        }
-
-        ul li a:hover {
-            color: #333;
-        }
+}
+.submenu a {
+    color: rgb(73, 67, 67);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+.nav li:hover .submenu {
+    display: block;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin: 5px 0;
+}
+ul li a {
+    text-decoration: none;
+    color: #666;
+}
+ul li a:hover {
+    color: #333;
+}
 .logo {
+    display: none; /* Esconde o logo inicialmente */
     height: 40px; 
     width: 80px;
-    }
-    .scrolled {
-        position: fixed;
-        background:  white;
-        top: 0;
-        left: 0; 
-        width: 100%;
-        padding: 20px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between; 
-    }
-
-    .scrolled .nav {
-        position: static; 
-        transform: none; 
-        margin: 0 auto; 
-    }
-
-    .scrolled .nav a {
-        color: black !important;
+}
+.scrolled .logo {
+    display: block; /* Mostra o logo quando a classe 'scrolled' é adicionada */
+}
+.scrolled {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.scrolled .nav {
+    position: static; 
+    transform: none; 
+    margin: 0 auto; 
+}
+.scrolled .nav a {
+    color: black !important;
 }
    
 .history {
