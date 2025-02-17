@@ -50,12 +50,13 @@
 }
 
 .nav a {
-    text-decoration: none;
     color: black;
-    font-size: 16px;
+    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
-    font-style:italic;
+    padding: 10px 15px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.2s;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
 }
 
 .nav a:hover {
@@ -175,19 +176,26 @@
     width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
     border-radius: 5px; /* Borda arredondada opcional */
 }
+
 .conteudo {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Garante alinhamento vertical */
+    justify-content: space-between; 
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    gap: 40px; /* Afastar texto da imagem */
+    margin: 80px auto;
+    gap: 20px; /* Garante um espaçamento uniforme */
 }
 
+    .texto {
+        flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+        font-style: italic;
+    }
+
 .texto {
-    max-width: 50%;
-    text-align: center;
+    flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+        font-style: italic;
 }
 
 .texto h2 {
@@ -241,6 +249,267 @@
 .next {
     right: 10px;
 }
+.conteudo-elegante {
+    display: flex;
+    align-items: center; /* Garante alinhamento vertical */
+    justify-content: space-between; /* Espaço uniforme entre os elementos */
+    max-width: 1200px;
+    margin: 80px auto;
+    gap: 20px; /* Garante um espaçamento uniforme */
+}
+
+    .conteudo-elegante-texto {
+        flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+        font-style: italic;
+        order: 2; /* Move o texto para a direita */
+    }
+
+    .conteudo-elegante-texto h2 {
+        font-size: 28px;
+        color: #8B6F4E;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .conteudo-elegante-texto p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .conteudo-elegante-texto-imagem {
+        width: 100%;
+    }
+
+    .conteudo-elegante-imagem {
+        order: 1; 
+    }
+
+    .conteudo-elegante-imagem img {
+        height: 100%; 
+        width: 620px;
+        object-fit: cover;
+        border-radius: 5px;
+        padding: 50px;
+}
+
+
+.event-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+    padding: 50px;
+}
+
+    .image-stack {
+        position: relative;
+        left:16%;
+        width: 350px; /* Ajuste conforme necessário */
+        height: auto;
+        display: flex;
+        flex-direction: column; /* Mantém as imagens empilhadas */
+        align-items: center; /* Centraliza as imagens */
+    }
+
+    .image-stack img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+
+
+    .img-medium {
+        width: 90%;
+        position: absolute;
+        top: 30px; 
+        z-index: 2;
+    }
+
+    /* NOVA IMAGEM NO MEIO, MAS DESLOCADA PARA A ESQUERDA */
+    .img-esquerda {
+        width: 85%;
+        position: absolute;
+        left: -350px; /* Move um pouco para a esquerda */
+        top: 50%; /* Coloca no meio das outras */
+        transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+        z-index: 1;
+    }
+
+    .img-small {
+        width: 85%;
+        position: relative;
+        margin-top: -40px; /* Ajusta a sobreposição */
+        z-index: 2;
+    }
+
+    .image-stack img:hover {
+        transform: scale(1.05);
+    }
+    .event-info {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+    }
+
+    .capacity h2 {
+        font-size: 16px;
+        color: #333;
+        margin: 0;
+    }
+    .capacity h3 {
+        font-size: 16px;
+        color: #8c6b4f;
+        margin: 0;
+    }   
+
+    .capacity span {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .capacity small {
+        display: block;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .event-types, .services {
+        margin-top: 20px;
+    }
+
+    .event-types h3, .services h3 {
+        font-size: 16px;
+        color: #8c6b4f;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .event-types ul, .services ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .event-types li, .services li {
+        font-size: 14px;
+        color: #333;
+        padding: 3px 0;
+}
+
+.events {
+        text-align: center;
+        padding: 50px;
+        background-color: #F8F5F0;
+        }
+        .events h2 {
+            font-size: 28px;
+            color: #8B6F4E;
+        }
+        .subtitle {
+            font-size: 20px;
+            font-style: italic;
+            color: #8B6F4E;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .events-btn {
+            display: inline-block;
+            background-color: #B8A389;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration:solid;
+        }
+        .events.btn a{
+            text-decoration: none; 
+            color: white; 
+            font-style: italic; 
+        }
+        .btn a:hover {
+            background-color: #8B6F4E;
+        }
+.opinions-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1000px;
+        }
+
+    .opinions-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+        }
+
+    .stars {
+        font-size: 20px;
+        color: gold;
+        }
+
+    .btn {
+        background: #c4a47c;
+        text-align: right;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+        color: white;
+        }
+    .btn a {
+        text-decoration: none; 
+        color: #292724; 
+        font-style: italic; 
+        }
+
+    .btn:hover {
+        background: #a0815e;
+        }
+    .opinions-slider {
+        width: 400px;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+        }
+
+    .opinion {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 100%;
+        transition: opacity 0.5s;
+        opacity: 0;
+        text-align: left;
+        }
+
+    .opinion.active {
+        opacity: 1;
+}
+
 footer {
             background-color:  #f1f1f1;
             padding: 40px 20px;
@@ -542,16 +811,21 @@ footer {
     }
 
     .conteudo {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px; 
-        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: baseline; 
+        justify-content: center;
+        margin: auto; 
+        padding: 20px;
     }
 
     .texto {
-        width: 100%; 
-        align-items: center; 
-        margin: 0 0 20px 0; 
+        text-align: center;
+        justify-content: center;
+        font-style: italic;
+        font-size: 18px; 
+        line-height: 1.8; 
+        width: 100%;
     }
 
     .imagem {
@@ -568,51 +842,133 @@ footer {
         font-size: 18px; 
     }
 }
+@media (max-width: 768px) {
+    .opinions-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
 
+    .opinions-box {
+        width: 90%;
+    }
+
+    .opinions-slider {
+        width: 90%;
+    }
+
+    .events {
+        padding: 20px;
+    }
+
+    .events h2 {
+        font-size: 24px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .events-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .conteudo-elegante {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .conteudo-elegante-texto {
+        text-align: center;
+        order: 1;
+    }
+
+    .conteudo-elegante-imagem {
+        width: 100%;
+        order: 2;
+    }
+
+    .conteudo-elegante-imagem img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .event-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-stack {
+        display: none;
+    }
+
+    .image-stack img {
+        display: none;
+    }
+
+    .event-info {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .services ul {
+        padding-left: 20px;
+    }
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+        padding: 40px 20px; ; 
     }
 
     .footer-social {
-        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        order: -1; 
         flex: 1 1 auto;
-        max-width: 90%; /* Ocupa toda a largura no mobile */
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        max-width: 90%; 
+        margin: 10px 0; 
     }
 
     .footer-contactos {
-        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        order: 1; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-logo {
-        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        order: 2; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-links {
-        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        order: 3; 
         text-align: center;
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
+        margin-top: 10px; 
     }
 
     .footer-credit {
-        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        order: 4; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
-        width: 100%; /* Garante que ocupa toda a largura */
+        margin-top: 10px; 
+        width: 100%; 
         text-align: center;
     }
 }
@@ -653,13 +1009,7 @@ function toggleMenu() {
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="Sobre.html">Sobre</a>
-                    <ul class="submenu">
-                        <li><a href="SobreAquinta.html">A Quinta</a></li>
-                        <li><a href="Aequipa.html">Serviços & Capacidade</a></li>
-                    </ul>
-                </li>
+                <li><a href="Sobre.html">Sobre</a></li>
                 <li><a href="Eventos.html">Eventos</a></li>
                 <li>
                     <a href="portofolio.html">Portofólio</a>
@@ -676,7 +1026,7 @@ function toggleMenu() {
 
     <!-- Banner -->
     <section class="banner">
-        <h1 class="titulo">HISTÓRIA</h1>
+        <h1 class="titulo">A QUINTA</h1>
         <p class="historiaehome"><a href="index.html">Home</a> / História</p>
     </section>
 
@@ -684,16 +1034,10 @@ function toggleMenu() {
     <section class="conteudo">
         <div class="texto">
             <h2>Casa dos Maias</h2>
-            <p>
-                Neste espaço amplo e requintado encontra-se uma magnífica 
-                Quinta de Pedra ladeada por um belo jardim relvado e florido.
+            <p>Neste espaço amplo e requintado encontra-se uma magnífica Quinta de Pedra ladeada por um belo jardim relvado e florido.
             </p>
-            <p>
-                Convidamo-lo a desfrutar da tranquilidade do som da cascata 
-                com vista para o nosso moderno salão preparado para receber o 
-                seu evento. Enquanto usufrui de um cocktail servido no bar 
-                verde, deixe-se contagiar pela música que a cabine de DJ fornece 
-                e desfrute da beleza que o rodeia.
+            <p>Convidamo-lo a desfrutar da tranquilidade do som da cascata com vista para o nosso moderno salão preparado para receber o seu evento. 
+            <p>Enquanto usufrui de um cocktail servido no bar  verde, deixe-se contagiar pela música que a cabine de DJ fornece e desfrute da beleza que o rodeia.</p>
             </p>
         </div>
     
@@ -718,7 +1062,83 @@ function toggleMenu() {
         </div>
     </section>
 
+    <section class="conteudo-elegante">
+        <div class="conteudo-elegante-texto">
+            <h2>ESPLÊNDIDA, ELEGANTE E REQUINTADA</h2>
+            <p>A Casa dos Maias disponibiliza espaços multifuncionais, permitindo a adaptação a qualquer tipo de evento, seja em ambiente interno ou externo. </p>
+            <p>Comprometida com a hospitalidade característica do Norte, a casa oferece um serviço personalizado, contando com uma rede de parceiros especializados para atender às mais diversas exigências. </p>
+            <p>Os noivos têm a oportunidade de desfrutar de um cenário idílico para fotografias ou mesmo realizar a cerimônia ao ar livre, rodeados pela beleza do jardim.</p>
+            <p>Além disso, o espaço dispõe de um parque de estacionamento privado com capacidade para 150 veículos, garantindo comodidade e exclusividade aos convidados.</p>
+        </div>
+        <div class="conteudo-elegante-imagem">
+            <img src="source/img.pag2.1/img1.jpg"alt="Casa dos Maias" >
+        </div>
+    </section>
+    <div class="event-section">
+        <div class="image-stack">
+            <img src="source/img.pag2.1/img2.jpg" class="img-large" alt="Evento 1">
+            <img src="source/img.pag2.1/img3.jpg" class="img-esquerda" alt="Evento 2">
+            <img src="source/img.pag2.1/img4.jpg" class="img-small" alt="Evento 3">
+        </div>
+        <div class="event-info">
+            <div class="capacity">
+                    <h3>Capacidade Máxima</h3>
+                    <h2> <span>180</span> <h2>
+                
+            </div>
+            <div class="event-types">
+                <h3>TIPO DE EVENTOS</h3>
+                <ul>
+                    <li><a href="eventos-casamentos.html">Casamentos</a></li>
+                    <li><a href="batizados-eventos.html">Batizados</a></li>
+                    <li><a href="comunhoes-eventos.html">Comunhões</a></li>
+                    <li><a href="EventosCorporativos-eventos.html">Eventos Corporativos</a></li>
+                </ul>
+            </div>
+            <div class="services">
+                <h3>SERVIÇOS COM PARCERIA</h3>
+                <ul>
+                    <li>DJ (Música e Animação)</li>
+                    <li>Bolo</li>
+                    <li>Decoração</li>
+                    <li>Animação Infantil</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
+    <div class="opinions-container">
+        <!-- Caixa fixa de opinião -->
+        <div class="opinions-box">
+            <h2>OPINIÕES ACERCA DA CASA DOS MAIAS</h2>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>99% dos noivos recomendam*</p>
+            <small>*informação de casamentos.pt</small>
+            <button class="btn" ><a href="https://www.casamentos.pt/quintas-para-casamentos/casa-dos-maias-maia--e105653">Para mais opiniões</a></button>
+        </div>
+       
+        <!-- Carrossel de Opiniões -->
+        <div class="opinions-slider" id="opinions-slider">
+            <div class="opinion active">
+                <p><strong>Rui S.</strong> <br> Casado a 23/08/2022</p>
+                <p>"A recordação que ficamos é de um lugar mágico saído de um livro de conto de fadas, simplesmente fantástico. Obrigado."</p>
+            </div>
+            <div class="opinion">
+                <p><strong>João e Ana</strong> <br> Casaram-se a 15/06/2023</p>
+                <p>"O espaço é maravilhoso, a organização foi incrível e tudo correu lindamente. Recomendamos muito!"</p>
+            </div>
+            <div class="opinion">
+                <p><strong>Ricardo</strong> <br> Casou-se a 10/09/2022</p>
+                <p>"Serviço excelente, lugar mágico e inesquecível! A melhor escolha que podíamos ter feito."</p>
+            </div>
+        </div>
+    </div>
+    <section class="events">
+        <h2>OS NOSSOS EVENTOS</h2>
+        <p class="subtitle">"Tornamos o seu sonho realidade"</p>
+        <p class="description">Conheça a lista de eventos realizados no nosso espaço, assim como a estrutura completa dos serviços incluídos em cada um deles. Garantimos momentos únicos onde, juntamente com familiares, amigos e/ou colaboradores, desfrutarão de um dia inesquecível.</p>
+        <a class="events-btn" href="Eventos.html">CONHECER</a>
+    </section>
     <footer>
         <div class="footer-container">
             
