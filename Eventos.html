@@ -181,19 +181,65 @@ body {
 .event-section-card {
     width: 260px;
     height: 245px; 
-    background-color: #B7A48B;
     text-align: center;
     padding: 20px;
     border-radius: 15px; 
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    background-size: cover;
+    background-position: center;
 }
 
-.event-section-card:hover {
-    transform: scale(1.08); /* Destaque ao passar o mouse */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+.event-section-card-casamentos {
+    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
 }
+
+.event-section-card-batizados {
+    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img3.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.event-section-card-comunhoes {
+    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img4.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.event-section-card--eventos-corporativos {
+    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img6.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.event-section-card img {
+    display: none;
+}
+
+.event-section-card-casamentos:hover {
+    transform: scale(1.08); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+.event-section-card-batizados:hover {
+    transform: scale(1.08); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+.event-section-card-comunhoes:hover {
+    transform: scale(1.08); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+.event-section-card--eventos-corporativos:hover {
+    transform: scale(1.08); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
 
 .event-section-card img {
     width: 100%;
@@ -210,7 +256,7 @@ body {
 .event-section-title {
     font-size: 22px;
     color: #fff;
-    margin-top: 19px;
+    margin-top: 179px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -220,7 +266,7 @@ body {
 .event-section-title-Corporativos {
     font-size: 22px;
     color: #fff;
-    margin-top: 7px;
+    margin-top: 165px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -649,33 +695,40 @@ footer {
 
 
     <section class="events-section">
+        <div class="event-section-card-casamentos">
         <a href="eventos-casamentos.html" class="event-section-link">
             <div class="event-section-card">
                 <img src="source/img.pag3/img2.jpg" alt="Casamentos">
                 <div class="event-section-title">CASAMENTOS</div>
             </div>
         </a>
+    </div>
 
+        <div class="event-section-card-batizados">
         <a href="batizados-eventos.html" class="event-section-link">
             <div class="event-section-card">
                 <img src="source/img.pag3/img3.jpg" alt="Baptizados">
                 <div class="event-section-title">BATIZADOS</div>
             </div>
+        
         </a>
-
+    </div>
+        <div class="event-section-card-comunhoes">
         <a href="comunhoes-eventos.html" class="event-section-link">
             <div class="event-section-card">
                 <img src="source/img.pag3/img4.jpg" alt="Aniversários">
                 <div class="event-section-title">COMUNHÕES</div>
             </div>
         </a>
-
+    </div>
+        <div class="event-section-card--eventos-corporativos">
         <a href="EventosCorporativos-eventos.html" class="event-section-link">
             <div class="event-section-card">
                 <img src="source/img.pag3/img6.jpg" alt="Eventos Corporativos">
                 <div class="event-section-title-Corporativos">EVENTOS CORPORATIVOS</div>
             </div>
         </a>
+    </div>
     </section>
     <footer>
         <div class="footer-container">
