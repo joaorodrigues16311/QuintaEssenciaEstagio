@@ -176,19 +176,26 @@
     width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
     border-radius: 5px; /* Borda arredondada opcional */
 }
+
 .conteudo {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Garante alinhamento vertical */
+    justify-content: space-between; 
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    gap: 40px; /* Afastar texto da imagem */
+    margin: 80px auto;
+    gap: 20px; /* Garante um espaçamento uniforme */
 }
 
+    .texto {
+        flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+        font-style: italic;
+    }
+
 .texto {
-    max-width: 50%;
-    text-align: center;
+    flex: 1; /* Ocupará o espaço disponível */
+        text-align: left; /* Melhor leitura */
+        font-style: italic;
 }
 
 .texto h2 {
@@ -804,16 +811,21 @@ footer {
     }
 
     .conteudo {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px; 
-        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: baseline; 
+        justify-content: center;
+        margin: auto; 
+        padding: 20px;
     }
 
     .texto {
-        width: 100%; 
-        align-items: center; 
-        margin: 0 0 20px 0; 
+        text-align: center;
+        justify-content: center;
+        font-style: italic;
+        font-size: 18px; 
+        line-height: 1.8; 
+        width: 100%;
     }
 
     .imagem {
@@ -830,51 +842,133 @@ footer {
         font-size: 18px; 
     }
 }
+@media (max-width: 768px) {
+    .opinions-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
 
+    .opinions-box {
+        width: 90%;
+    }
+
+    .opinions-slider {
+        width: 90%;
+    }
+
+    .events {
+        padding: 20px;
+    }
+
+    .events h2 {
+        font-size: 24px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .events-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .conteudo-elegante {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .conteudo-elegante-texto {
+        text-align: center;
+        order: 1;
+    }
+
+    .conteudo-elegante-imagem {
+        width: 100%;
+        order: 2;
+    }
+
+    .conteudo-elegante-imagem img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .event-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-stack {
+        display: none;
+    }
+
+    .image-stack img {
+        display: none;
+    }
+
+    .event-info {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .services ul {
+        padding-left: 20px;
+    }
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+        padding: 40px 20px; ; 
     }
 
     .footer-social {
-        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        order: -1; 
         flex: 1 1 auto;
-        max-width: 90%; /* Ocupa toda a largura no mobile */
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        max-width: 90%; 
+        margin: 10px 0; 
     }
 
     .footer-contactos {
-        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        order: 1; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-logo {
-        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        order: 2; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-links {
-        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        order: 3; 
         text-align: center;
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
+        margin-top: 10px; 
     }
 
     .footer-credit {
-        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        order: 4; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
-        width: 100%; /* Garante que ocupa toda a largura */
+        margin-top: 10px; 
+        width: 100%; 
         text-align: center;
     }
 }
@@ -946,16 +1040,10 @@ function toggleMenu() {
     <section class="conteudo">
         <div class="texto">
             <h2>Casa dos Maias</h2>
-            <p>
-                Neste espaço amplo e requintado encontra-se uma magnífica 
-                Quinta de Pedra ladeada por um belo jardim relvado e florido.
+            <p>Neste espaço amplo e requintado encontra-se uma magnífica Quinta de Pedra ladeada por um belo jardim relvado e florido.
             </p>
-            <p>
-                Convidamo-lo a desfrutar da tranquilidade do som da cascata 
-                com vista para o nosso moderno salão preparado para receber o 
-                seu evento. Enquanto usufrui de um cocktail servido no bar 
-                verde, deixe-se contagiar pela música que a cabine de DJ fornece 
-                e desfrute da beleza que o rodeia.
+            <p>Convidamo-lo a desfrutar da tranquilidade do som da cascata com vista para o nosso moderno salão preparado para receber o seu evento. 
+            <p>Enquanto usufrui de um cocktail servido no bar  verde, deixe-se contagiar pela música que a cabine de DJ fornece e desfrute da beleza que o rodeia.</p>
             </p>
         </div>
     
