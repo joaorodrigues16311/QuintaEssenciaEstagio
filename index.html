@@ -67,10 +67,10 @@ body, html {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
-    font-size: 16px;
-    transition: color 0.3s;
-    font-style: italic;
+    padding: 10px 15px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.2s;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
 }
 .submenu {
     display: none;
@@ -88,31 +88,31 @@ body, html {
     font-size: 16px;
     font-style: italic;
     transition: color 0.3s;
-}
-.nav li:hover .submenu {
-    display: block;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-ul li {
-    margin: 5px 0;
-}
-ul li a {
-    text-decoration: none;
-    color: #666;
-}
-ul li a:hover {
-    color: #333;
+    }
+    .nav li:hover .submenu {
+        display: block;
+    }
+    .nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    .nav ul li {
+        margin: 5px 0;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+    .nav ul li a:hover {
+        color: #333;
 }
 .logo {
-    display: none; /* Esconde o logo inicialmente */
+    display: none; 
     height: 40px; 
     width: 80px;
 }
 .scrolled .logo {
-    display: block; /* Mostra o logo quando a classe 'scrolled' é adicionada */
+    display: block; 
 }
 .scrolled {
     position: fixed;
@@ -133,7 +133,42 @@ ul li a:hover {
 .scrolled .nav a {
     color: black !important;
 }
-   
+.scrolled .submenu {
+            display: none;
+            position: absolute;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .scrolled .submenu a {
+            color: rgb(73, 67, 67);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .scrolled li:hover .submenu {
+            display: block;
+        }
+        .scrolled ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .scrolled ul li {
+        margin: 5px 0;
+    }
+
+    .scrolled ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    .scrolled ul li a:hover {
+        color: #333;
+    }
 .history {
      text-align: center;
      padding: 50px;
