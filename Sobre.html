@@ -62,43 +62,56 @@
 .nav a:hover {
     color: #c27a48;
 }
-    .submenu {
-            display: none;
-            position: absolute;
-            background: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .submenu a {
-            color: rgb(73, 67, 67);
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        .nav li:hover .submenu {
-            display: block;
-        }
-        ul {
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 09px;
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+}
+.submenu a {
+    display: block; 
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    font-style: italic;
+    transition: color 0.3s;
+    }
+    .submenu:hover {
+        color: #8B6F4E;
+    }
+    
+   
+    .nav li:hover .submenu {
+        display: block;
+        
+    }
+    .nav ul {
         list-style: none;
         padding: 0;
     }
-
-    ul li {
-        margin: 5px 0;
+    .nav ul li {
+        margin: 5px ;
     }
-
-    ul li a {
+    .nav ul li a {
         text-decoration: none;
         color: #666;
     }
 
-    ul li a:hover {
-        color: #333;
+    .nav ul li a:hover {
+        color: white !important;
+        background-color:#8B6F4E !important ;
     }
-    
+    .nav a:hover {
+        color: #8B6F4E  !important;
+    }
     
     .banner {
         background: url('source/img.pag2.1/img5.jpg') center/cover no-repeat;
