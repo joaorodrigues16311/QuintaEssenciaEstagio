@@ -83,33 +83,41 @@ body, html {
     margin-top: 09px;
     line-height: 1.8; 
     border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
 }
 .submenu a {
-    display: block; /* Faz o link ocupar toda a largura */
-    border-bottom: 2px solid #e1e1e1;
-    color: rgb(73, 67, 67);
+    display: block; 
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 11px;
     font-style: italic;
     transition: color 0.3s;
     }
+    .submenu:hover {
+        color: #8B6F4E;
+    }
+   
     .nav li:hover .submenu {
         display: block;
+        
     }
     .nav ul {
         list-style: none;
         padding: 0;
     }
     .nav ul li {
-        margin: 5px 0;
+        margin: 5px ;
     }
     .nav ul li a {
         text-decoration: none;
         color: #666;
     }
     .nav ul li a:hover {
-        color: #333;
+        background-color: #8B735B;
+        color: rgb(255, 255, 255)
 }
 .logo {
     display: none; 
@@ -139,19 +147,25 @@ body, html {
     color: black !important;
 }
 .scrolled .submenu {
-            display: none;
-            position: absolute;
-            background: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            padding: 10px;
-            border-radius: 5px;
+    display: none;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 09px;
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
         }
         .scrolled .submenu a {
-            color: rgb(73, 67, 67);
+            display: block; 
+            border-bottom: 1px solid #e1e1e1;
+            color: #4d504a;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px;
-            font-size: 16px;
+            font-size: 11px;
+            font-style: italic;
             transition: color 0.3s;
         }
         .scrolled li:hover .submenu {
@@ -171,8 +185,9 @@ body, html {
         color: #666;
     }
 
-    .scrolled ul li a:hover {
-        color: #333;
+    .scrolled .submenu a:hover {
+        color: #8B6F4E;
+        background-color: rgba(0, 0, 0, 0.1);
     }
 .history {
      text-align: center;
