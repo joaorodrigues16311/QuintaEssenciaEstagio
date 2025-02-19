@@ -379,119 +379,128 @@ footer {
         transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
     }
     .nav-container {
-        position: fixed;
-        background: white; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1003;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white; 
+    z-index: 10001;
+    padding: 15px 20px;
+    display: flex;
+    align-items: left; 
+    justify-content: space-between;
+    transition: background 0.3s ease; 
     }
     .nav {
-        position: absolute;
-        top: 60px; /* Ajusta a posição do menu */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        background: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .nav a {
-        color: #333; /* Usa um tom de cinza mais suave para o texto */
-        font-size: 17px;
-        text-align:left;
-        padding: 5px 10px;
-        margin: 0;
-        width: 100%;
-        text-decoration: none;
-        transition: background 0.3s ease, color 0.3s ease; 
-    }
-    .nav ul {
-        position: relative;
-        font-style: italic;
-        font-family: "Cormorant Garamond",serif;
-        list-style: none;
-        font-size: 17px;
-        line-height: 20px;
-        font-weight: 400;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav li {
-        margin: 0;
-        position: relative;
-        font-style: italic;
-        font-family: "Cormorant Garamond",serif;
-        font-size: 17px;
-        line-height: 09px;
-        font-weight: 200px;
-        position: relative;
-        padding: 2px 05px; /* Reduzindo o espaçamento vertical e horizontal */
-        text-align: left; /* Alinha o texto à esquerda */
-        border-bottom: 1px solid #e1e1e1;
-    }
-    .nav li:hover .submenu {
-        display: block;
-    }
-
-    .nav li:last-child {
-        border-bottom: none; /* Remove a linha do último item */
-    }
-
-    .nav a:hover {
-        color: #8B6F4E;
-    }
-    .submenu {
-        display: none;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.95); 
-        color: rgb(0, 0, 0);
-        padding: 10px;
-        border-radius: 8px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        transition: opacity 0.3s ease, transform 0.3s ease; 
-        opacity: 0;
-        transform: translateY(10px); 
-    }
-
-    .nav li:hover .submenu {
-        display: block;
-        opacity: 1;
-        transform: translateY(0); 
-    }
-
-    .submenu a {
-        color: rgb(73, 67, 67);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
-        font-size: 16px;
-        font-style: italic;
-        transition: color 0.3s, background 0.3s; 
-        display: block; 
-        border-radius: 5px; 
-    }
-
-    .submenu a:hover {
-        background: rgba(0, 0, 0, 0.1); 
-        color: rgb(0, 0, 0); 
-    }
+        position: fixed;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 61px;
+    left: -08px;
+    width: 100%;
+    z-index: 1003;
+    display: none;
+    align-items: left;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-top: 9px; 
+    line-height: 1.8;
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
 }
+
+.nav.active {
+    display: flex;
+}
+
+ul.nav.active {
+    display: flex;
+    margin-left: 8px;
+}
+.nav a {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 5px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #666;
+}
+.nav a:hover {
+    color: #4d504a;
+}
+
+.nav ul li:hover {
+    color: #4d504a;
+}
+.nav li:last-child {
+    border-bottom: none;
+}
+.logo {
+    display: block;
+}
+.submenu {
+    display: none;
+    position: absolute; 
+    background: rgba(255, 255, 255, 0.95); 
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0;
+    transform: translateY(10px); 
+    z-index: 1001; 
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
+    left: 0; 
+}
+.nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.submenu a {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+.submenu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
+}
+
+
 @media (min-width: 769px) {
     .menu-toggle {
         display: none !important;
@@ -805,6 +814,21 @@ footer {
                 const nav = document.querySelector(".nav");
                 nav.classList.toggle("active");
                 }
+                document.addEventListener("DOMContentLoaded", function () {
+                const menuItems = document.querySelectorAll(".nav li > a");
+
+                menuItems.forEach(item => {
+                item.addEventListener("click", function (event) {
+                const submenu = this.nextElementSibling;
+
+                if (submenu && submenu.classList.contains("submenu")) {
+                event.preventDefault(); 
+                submenu.classList.toggle("active"); 
+                }
+                });
+            });
+        });
+            
             </script>  
         </body>
         </html>    
