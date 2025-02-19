@@ -502,46 +502,55 @@ footer {
     }
 
     .nav-container {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.9); /* Torna o fundo ligeiramente transparente */
-        z-index: 10001;
-        padding: 15px 20px;
-        display: flex;
-        align-items: left;
-        justify-content: space-between;
-        transition: background 0.3s ease; /* Suaviza a transição de fundo */
-    }
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9); /* Fundo ligeiramente transparente */
+    z-index: 10001;
+    padding: 15px 20px;
+    display: flex;
+    align-items: left; 
+    justify-content: space-between;
+    transition: background 0.3s ease; /* Suaviza a transição de fundo */
+}
 
-    .nav {
-        position: fixed;
-        background: rgba(255, 255, 255, 0.9); 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        top: 61px;
-        left: 180px;
-        width: 100%;
-        z-index: 1003;
-        display: none;
-        align-items: left;
-        justify-content: space-between;
-        padding: 15px 20px;
-        margin-top: 09px;
-        line-height: 1.8; 
-        border-radius: 5px;
-        letter-spacing: .3em;
-        font-family: 'Muli', sans-serif;
-        flex-direction: column;
-        gap:12px;
-    }
+/* Nav principal (menu) */
+.nav {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 61px;
+    left: 180px;
+    width: 100%;
+    z-index: 1003;
+    display: none;
+    align-items: left;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-top: 9px; /* Corrigido de 09px para 9px */
+    line-height: 1.8;
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
+}
 
+/* Quando o menu está ativo */
 .nav.active {
     display: flex;
 }
 
+/* (Opcional) se estiveres a usar 'ul.nav.active' em vez de '.nav.active' */
+ul.nav.active {
+    display: flex;
+    margin-left: 8px;
+}
+
+/* Links principais do menu */
 .nav a {
-    display: block; 
+    display: block;
     border-bottom: 1px solid #e1e1e1;
     color: #4d504a;
     text-decoration: none;
@@ -550,68 +559,74 @@ footer {
     font-style: italic;
     transition: color 0.3s;
 }
-ul.nav.active{
-    display: flex;
-    margin-left: 08px;
-}
+
+/* Listas */
 .nav ul {
-        list-style: none;
-        padding: 0;
-    }
-    .nav ul li {
-        margin: 5px ;
-    }
-    .nav ul li a {
-        text-decoration: none;
-        color: #666;
-    }
-    .nav a:hover {
-        color: rgb(255, 255, 255);
-    }
-    .nav ul li:hover {
-        background-color: #8B735B;
-        color: rgb(255, 255, 255)
+    list-style: none;
+    padding: 0;
 }
 
+.nav ul li {
+    margin: 5px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* Hover dos links principais */
+.nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Hover no <li> (muda fundo) */
+.nav ul li:hover {
+    background-color: #8B735B;
+    color: rgb(255, 255, 255);
+}
+
+/* Remove a borda do último item */
 .nav li:last-child {
     border-bottom: none;
 }
+
+/* Logo (se tiveres um .logo) */
+.logo {
+    display: block;
+}
+
+/* Submenu “igualzinho” ao que enviaste */
+.submenu {
+    display: none;
+    position: absolute; 
+    background: rgba(255, 255, 255, 0.95); 
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0;
+    transform: translateY(10px); 
+    z-index: 1001; /* Para ficar acima de outros elementos */
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
+    left: 0; /* Alinha o submenu à esquerda do pai */
+}
+
+/* Ao passar o rato no li, mostra o submenu */
 .nav li:hover .submenu {
-        display: block;
-        
-    }
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .logo {
-    display: block; 
-    }
-    .submenu {
-        display: none;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.95); 
-        color: rgb(0, 0, 0);
-        padding: 15px 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        transition: opacity 0.3s ease, transform 0.3s ease; 
-        opacity: 0;
-        transform: translateY(10px); 
-        z-index: 1001; /* Ensures submenu is above other elements */
-        line-height: 1.8; 
-        border-radius: 5px;
-        letter-spacing: .3em;
-        font-family: 'Muli', sans-serif;
-        flex-direction: column;
-        gap:12px;
-        left: 0; /* Aligns submenu to the left of the parent */
-    }
-
-    .nav li:hover .submenu {
-        display: block;
-        opacity: 1;
-        transform: translateY(0); 
-    }
-
-    .submenu a {
-        display: block; 
+/* Links dentro do submenu */
+.submenu a {
+    display: block;
     border-bottom: 1px solid #e1e1e1;
     color: #4d504a;
     text-decoration: none;
@@ -619,13 +634,13 @@ ul.nav.active{
     font-size: 11px;
     font-style: italic;
     transition: color 0.3s;
-         
-    }
+}
 
-    .submenu a:hover {
-        background: rgba(0, 0, 0, 0.1); 
-        color: rgb(0, 0, 0); 
-    }
+/* Hover nos links do submenu */
+.submenu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
     .scrolled {
         position: fixed;
         background: white; 
