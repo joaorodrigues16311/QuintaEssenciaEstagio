@@ -1025,6 +1025,23 @@ function toggleMenu() {
     const nav = document.querySelector(".nav");
     nav.classList.toggle("active");
 }
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todos os itens do menu que têm submenus
+    const menuItems = document.querySelectorAll(".nav li > a");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", function (event) {
+            const submenu = this.nextElementSibling;
+
+            // Verifica se existe submenu
+            if (submenu && submenu.classList.contains("submenu")) {
+                event.preventDefault(); // Impede o link de navegar
+                submenu.classList.toggle("active"); // Alterna a visibilidade do submenu
+            }
+        });
+    });
+});
+
        
 </script>
 <body>
