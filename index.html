@@ -510,78 +510,79 @@ footer {
         z-index: 10001;
         padding: 15px 20px;
         display: flex;
-        align-items: center;
+        align-items: left;
         justify-content: space-between;
         transition: background 0.3s ease; /* Suaviza a transição de fundo */
     }
 
     .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Ajusta a posição do menu */
-        width: 100%; /* Reduz a largura para dar um pouco de margem */
-        margin: 0 auto; /* Centraliza o menu */
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px; /* Aumenta o arredondamento dos cantos */
-        overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
-        border-bottom: 1px solid #e1e1e1;
-        gap: 20px;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .nav a {
-        color: #333; /* Usa um tom de cinza mais suave para o texto */
-        font-size: 17px;
-        text-align:left;
-        padding: 5px 10px;
-        margin: 0;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.9); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        top: 61px;
+        left: 180px;
         width: 100%;
-        text-decoration: none;
-        transition: background 0.3s ease, color 0.3s ease; 
+        z-index: 1003;
+        display: none;
+        align-items: left;
+        justify-content: space-between;
+        padding: 15px 20px;
+        margin-top: 09px;
+        line-height: 1.8; 
+        border-radius: 5px;
+        letter-spacing: .3em;
+        font-family: 'Muli', sans-serif;
+        flex-direction: column;
+        gap:12px;
     }
-    .nav ul {
-        position: relative;
-        font-style: italic;
-        font-family: "Cormorant Garamond",serif;
+
+.nav.active {
+    display: flex;
+}
+
+.nav a {
+    display: block; 
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+ul.nav.active{
+    display: flex;
+    margin-left: 08px;
+}
+.nav ul {
         list-style: none;
-        font-size: 17px;
-        line-height: 20px;
-        font-weight: 400;
         padding: 0;
-        margin: 0;
     }
+    .nav ul li {
+        margin: 5px ;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+    .nav a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .nav ul li:hover {
+        background-color: #8B735B;
+        color: rgb(255, 255, 255)
+}
 
-    .nav li {
-        margin: 0;
-        position: relative;
-        font-style: italic;
-        font-family: "Cormorant Garamond",serif;
-        font-size: 17px;
-        line-height: 09px;
-        font-weight: 200px;
-        position: relative;
-        padding: 2px 05px; /* Reduzindo o espaçamento vertical e horizontal */
-        text-align: left; /* Alinha o texto à esquerda */
-        border-bottom: 1px solid #e1e1e1;
-    }
-    .nav li:hover .submenu {
+.nav li:last-child {
+    border-bottom: none;
+}
+.nav li:hover .submenu {
         display: block;
+        
     }
 
-    .nav li:last-child {
-        border-bottom: none; /* Remove a linha do último item */
-    }
     .logo {
     display: block; 
-    }
-
-    .nav a:hover {
-        color: #8B6F4E;
     }
     .submenu {
         display: none;
