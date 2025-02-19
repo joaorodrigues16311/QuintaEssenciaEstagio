@@ -488,17 +488,17 @@ footer {
         right: 15px;
         z-index: 10003;
         background: #F4C485;
-        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
-        border-radius: 50%; /* Torna o botão circular */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        padding: 12px 18px; 
+        border-radius: 50%; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
         cursor: pointer;
         border: none;
-        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
+        transition: background 0.3s ease, transform 0.3s ease; 
     }
 
     .menu-toggle:hover {
-        background: #e0b374; /* Escurece um pouco a cor ao passar o mouse */
-        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+        background: #e0b374; 
+        transform: scale(1.1); 
     }
 
     .nav-container {
@@ -506,16 +506,14 @@ footer {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.9); /* Fundo ligeiramente transparente */
+    background: rgba(255, 255, 255, 0.9); 
     z-index: 10001;
     padding: 15px 20px;
     display: flex;
     align-items: left; 
     justify-content: space-between;
-    transition: background 0.3s ease; /* Suaviza a transição de fundo */
+    transition: background 0.3s ease; 
 }
-
-/* Nav principal (menu) */
 .nav {
     position: fixed;
     background: rgba(255, 255, 255, 0.9);
@@ -528,7 +526,7 @@ footer {
     align-items: left;
     justify-content: space-between;
     padding: 15px 20px;
-    margin-top: 9px; /* Corrigido de 09px para 9px */
+    margin-top: 9px; 
     line-height: 1.8;
     border-radius: 5px;
     letter-spacing: .3em;
@@ -537,18 +535,14 @@ footer {
     gap: 12px;
 }
 
-/* Quando o menu está ativo */
 .nav.active {
     display: flex;
 }
 
-/* (Opcional) se estiveres a usar 'ul.nav.active' em vez de '.nav.active' */
 ul.nav.active {
     display: flex;
     margin-left: 8px;
 }
-
-/* Links principais do menu */
 .nav a {
     display: block;
     border-bottom: 1px solid #e1e1e1;
@@ -560,7 +554,6 @@ ul.nav.active {
     transition: color 0.3s;
 }
 
-/* Listas */
 .nav ul {
     list-style: none;
     padding: 0;
@@ -569,34 +562,23 @@ ul.nav.active {
 .nav ul li {
     margin: 5px;
 }
-
 .nav ul li a {
     text-decoration: none;
     color: #666;
 }
-
-/* Hover dos links principais */
 .nav a:hover {
-    color: rgb(255, 255, 255);
+    color: #4d504a;
 }
 
-/* Hover no <li> (muda fundo) */
 .nav ul li:hover {
-    background-color: #8B735B;
-    color: rgb(255, 255, 255);
+    color: #4d504a;
 }
-
-/* Remove a borda do último item */
 .nav li:last-child {
     border-bottom: none;
 }
-
-/* Logo (se tiveres um .logo) */
 .logo {
     display: block;
 }
-
-/* Submenu “igualzinho” ao que enviaste */
 .submenu {
     display: none;
     position: absolute; 
@@ -607,24 +589,23 @@ ul.nav.active {
     transition: opacity 0.3s ease, transform 0.3s ease; 
     opacity: 0;
     transform: translateY(10px); 
-    z-index: 1001; /* Para ficar acima de outros elementos */
+    z-index: 1001; 
     line-height: 1.8; 
     border-radius: 5px;
     letter-spacing: .3em;
     font-family: 'Muli', sans-serif;
     flex-direction: column;
     gap: 12px;
-    left: 0; /* Alinha o submenu à esquerda do pai */
+    left: 0; 
 }
-
-/* Ao passar o rato no li, mostra o submenu */
 .nav li:hover .submenu {
     display: block;
     opacity: 1;
     transform: translateY(0);
+    position: relative;
+    left: 0;
+    top: 0;
 }
-
-/* Links dentro do submenu */
 .submenu a {
     display: block;
     border-bottom: 1px solid #e1e1e1;
@@ -635,8 +616,6 @@ ul.nav.active {
     font-style: italic;
     transition: color 0.3s;
 }
-
-/* Hover nos links do submenu */
 .submenu a:hover {
     background: rgba(0, 0, 0, 0.1);
     color: rgb(0, 0, 0);
