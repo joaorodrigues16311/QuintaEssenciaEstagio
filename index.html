@@ -678,7 +678,7 @@ ul.nav.active {
     
 }
 
-/* No desktop, esconde o botão */
+
 @media (min-width: 769px) {
     .menu-toggle {
         display: none !important;
@@ -687,7 +687,7 @@ ul.nav.active {
 
 @media (max-width: 768px) {
     .hero {
-        height: 70vh; /* Reduz a altura */
+        height: 70vh; 
         padding: 20px;
     }
 
@@ -708,30 +708,31 @@ ul.nav.active {
     }
 
     .gallery-item {
-        width: 90%; /* Ajusta o tamanho da imagem */
+        width: 90%; 
         height: auto;
     }
 
     .events {
-        padding: 20px; /* Reduz o padding para menos espaçamento */
+        padding: 20px; 
     }
 
     .events h2 {
-        font-size: 24px; /* Reduz o tamanho da fonte */
+        font-size: 24px;
     }
 
     .subtitle {
-        font-size: 18px; /* Reduz o tamanho da fonte */
+        font-size: 18px; 
     }
 
     .description {
-        font-size: 16px; /* Reduz o tamanho da fonte */
-        padding: 0 10px; /* Adiciona padding lateral */
+        font-size: 16px; 
+        padding: 0 10px; 
     }
 
     .btn {
-        padding: 10px 20px; /* Reduz o padding do botão */
-        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+        padding: 10px 20px; 
+        font-size: 14px;
+        text-decoration: none;
     }
 }
 
@@ -747,44 +748,44 @@ ul.nav.active {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+        padding: 40px 20px; ; 
     }
 
     .footer-social {
-        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        order: -1; 
         flex: 1 1 auto;
-        max-width: 90%; /* Ocupa toda a largura no mobile */
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        max-width: 90%; 
+        margin: 10px 0; 
     }
 
     .footer-contactos {
-        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        order: 1; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-logo {
-        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        order: 2; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-links {
-        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        order: 3; 
         text-align: center;
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
+        margin-top: 10px; 
     }
 
     .footer-credit {
-        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        order: 4; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
-        width: 100%; /* Garante que ocupa toda a largura */
+        margin-top: 10px; 
+        width: 100%; 
         text-align: center;
     }
 
@@ -811,20 +812,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector(".nav");
     const navContainer = document.querySelector(".nav-container");
 
-    // Garante que o botão sempre aparece
+
     if (menuToggle) {
         menuToggle.style.display = "block";
-
-        // Adiciona evento de clique para abrir e fechar o menu
         menuToggle.addEventListener("click", function () {
             nav.classList.toggle("active");
-
-            // Alterna a classe 'open' no botão para indicar o estado do menu
             menuToggle.classList.toggle("open");
         });
     }
-
-    // Adiciona ou remove a classe "scrolled" ao nav-container conforme o scroll
     window.addEventListener("scroll", function () {
         if (window.scrollY > 90) {
             navContainer.classList.add("scrolled");
@@ -832,8 +827,6 @@ document.addEventListener("DOMContentLoaded", function () {
             navContainer.classList.remove("scrolled");
         }
     });
-
-    // Fecha o menu ao clicar fora dele
     document.addEventListener("click", function (event) {
         if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
             nav.classList.remove("active");
