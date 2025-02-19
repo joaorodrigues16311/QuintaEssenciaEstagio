@@ -768,7 +768,7 @@ ul.nav.active {
 .submenu {
     display: none;
     position: absolute; 
-    background: white; 
+    background: rgba(255, 255, 255, 0.95); 
     color: rgb(0, 0, 0);
     padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -784,16 +784,12 @@ ul.nav.active {
     gap: 12px;
     left: 0; 
 }
-.nav li {
-    position: relative;
-}
-
 .nav li:hover .submenu {
     display: block;
     opacity: 1;
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 100%;
+    top: 0;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
@@ -810,7 +806,7 @@ ul.nav.active {
 .submenu a:hover {
     background: rgba(0, 0, 0, 0.1);
     color: rgb(0, 0, 0);
-    }
+}
 }
 
 @media (min-width: 769px) {
