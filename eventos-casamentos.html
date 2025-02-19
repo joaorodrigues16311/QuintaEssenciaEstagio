@@ -38,67 +38,84 @@ body {
         width: 80px;
     }
 
-    .nav {
-        display: flex;
-        flex-grow: 1;  
-        justify-content: center; 
-        gap: 40px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
 
-    .nav a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 15px;
-        font-size: 20px;
-        transition: color 0.3s, transform 0.2s;
-        font-family: 'Montserrat', sans-serif;
-    }
+.nav {
+    display: flex;
+    flex-grow: 1; 
+     
+    justify-content: center; 
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.10s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    text-transform: uppercase;
+    transition: background 0.05s; 
+}
 
-    .nav a:hover {
-        color: #c27a48;
-    }
+.nav a:hover {
+    color: #c27a48;
+}
 .submenu {
-        display: none;
-        position: absolute;
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        padding: 10px;
-        border-radius: 5px;
+    display: none;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 09px;
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+}
+.submenu a {
+    display: block; 
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
     }
-    .submenu a {
-        color: rgb(73, 67, 67);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
-        font-size: 16px;
-        transition: color 0.3s;
+    .submenu:hover {
+        color: #8B6F4E;
     }
+    
+   
     .nav li:hover .submenu {
         display: block;
+        
     }
-    ul {
+    .nav ul {
         list-style: none;
         padding: 0;
     }
-
-    ul li {
-        margin: 5px 0;
+    .nav ul li {
+        margin: 5px ;
     }
-
-    ul li a {
+    .nav ul li a {
         text-decoration: none;
         color: #666;
     }
 
-    ul li a:hover {
-        color: #333;
-}
-
+    .nav ul li a:hover {
+        color: white !important;
+        background-color:#8B6F4E !important ;
+    }
+    .nav a:hover {
+        color: #8B6F4E  !important;
+    }
 .container {
         display: flex;
         align-items: center;
