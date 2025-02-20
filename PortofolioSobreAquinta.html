@@ -148,21 +148,28 @@ body {
 
     .tall-image {
         grid-row: span 2;
-        height: 590px; 
+        width: 100%;
+        height: 620px; 
         object-fit: cover;
         border-radius: 10px;
+        grid-column: -2/-1;
+        margin-left: auto;
     }
     .tall-image-esquerda {
+        width: 100%;
         grid-row: span 2;
-        height: 590px; 
+        height: 620px; 
         object-fit: cover;
         border-radius: 10px;
     }
 
-    .gallery-image:hover,
-    .tall-image:hover {
+    .gallery-image:hover {
         transform: scale(1.05);
 }
+    .tall-image:hover,
+    .tall-image-esquerda:hover {
+        transform: scale(01.03);
+    }
 
 .modal {
     display: none;
@@ -179,14 +186,12 @@ body {
     }
 
 
-    .modal-content {
-        max-width: 80%;
+    .modal-content  {
+        max-width: 60%;
         max-height: 80%;
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     }
-
-
     .close {
         position: absolute;
         top: 20px;
@@ -211,7 +216,6 @@ body {
         padding: 10px;
         border-radius: 5px;
     }
-
     .modal-nav:hover {
         background: rgba(0, 0, 0, 0.8);
     }
@@ -222,7 +226,9 @@ body {
 
     #nextImage {
         right: 10%;
-}
+    }
+
+  
 footer {
             background-color:  #f1f1f1;
             padding: 40px 20px;
@@ -542,7 +548,8 @@ ul.nav.active {
         transition: transform 0.3s ease-in-out;
     }
 
-    .tall-image {
+    .tall-image ,
+    .tall-image-esquerda {
         width: 100%;
         height: 300px; 
         object-fit: cover;
@@ -699,16 +706,17 @@ ul.nav.active {
             <img src="source/img.portofolioaquinta/img5.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img6.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img7.jpg" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img4.jpg" class="tall-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img10.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img16.webp" class="tall-image-esquerda" alt="A quinta">
             <img src="source/img.portofolioaquinta/img11.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img12.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img13.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img14.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img15.webp" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img16.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img17.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img18.jpg" class="gallery-image" alt="A quinta">
         </div>
     
         <!-- Modal --> 
@@ -770,7 +778,7 @@ ul.nav.active {
                 const prevBtn = document.getElementById("prevImage");
                 const nextBtn = document.getElementById("nextImage");
             
-                const images = document.querySelectorAll(".gallery-image, .tall-image");
+                const images = document.querySelectorAll(".gallery-image, .tall-image, .tall-image-esquerda");
                 let currentIndex = 0;
             
                 function openModal(index) {
