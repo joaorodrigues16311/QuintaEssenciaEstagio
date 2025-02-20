@@ -20,17 +20,17 @@ body {
 
 
 .nav-container {
-    position: fixed;    /* Fixa o menu no topo da página, ele não se move ao rolar */
-    top: 0;     /* Mantém a barra no topo da página */
-    left: 0;    /* Alinha a barra à esquerda da tela */
-    width: 100%;    /* Faz com que a barra ocupe toda a largura da tela */
-    display: flex;  /* Usa Flexbox para alinhar os elementos dentro da barra */
-    justify-content: space-between;     /* Distribui os itens: um na esquerda e outro na direita */
-    align-items: center;    /* Centraliza os itens verticalmente */
-    background: white;  /* Define o fundo da barra como branco */
-    padding: 20px 50px; /* Adiciona espaço interno: 20px acima/abaixo e 50px nas laterais */
-    z-index: 1000;  /* Garante que a barra fique sobre outros elementos da página */
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   /* Adiciona uma leve sombra para destacar a barra */
+    position: fixed;   
+    top: 0;    
+    left: 0;   
+    width: 100%;    
+    display: flex;  
+    justify-content: space-between;     
+    align-items: center;   
+    background: white;  
+    padding: 20px 50px; 
+    z-index: 1000;  
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
 }
 
     .logo {
@@ -230,7 +230,7 @@ footer {
             margin: auto;
         }
 
-        /* ESTILO DOS CONTACTOS */
+        
         .footer-contactos {
             flex: 1;
             min-width: 250px;
@@ -260,7 +260,7 @@ footer {
             text-decoration: underline;
         }
 
-        /* ESTILO DAS REDES SOCIAIS */
+        
         .footer-social {
             flex: 1;
             text-align: center;
@@ -324,10 +324,10 @@ footer {
             color: #000;
         }
         .footer-credit {
-            font-size: 12px; /* Menor tamanho de fonte */
+            font-size: 12px; 
             color: #777;
             font-style: italic;
-            margin-top: 5px; /* Reduzi a margem superior para ficar mais perto dos links */
+            margin-top: 5px; 
             text-align: right;
         }
 
@@ -363,17 +363,17 @@ footer {
         right: 15px;
         z-index: 10003;
         background: white;
-        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
-        border-radius: 50%; /* Torna o botão circular */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        padding: 12px 18px;
+        border-radius: 50%; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         border: none;
-        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
+        transition: background 0.3s ease, transform 0.3s ease; 
     }
 
     .menu-toggle:hover {
-        background: white; /* Escurece um pouco a cor ao passar o mouse */
-        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+        background: white; 
+        transform: scale(1.1); 
     }
     .nav-container {
     position: fixed;
@@ -508,7 +508,7 @@ ul.nav.active {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 120px 15px; /* Padding ajustado */
+        padding: 120px 15px;
     }
 
     .image-section {
@@ -521,12 +521,12 @@ ul.nav.active {
     }
 
     .overlay h2 {
-        font-size: 24px; /* Reduzi a fonte para melhor adaptação */
+        font-size: 24px; 
         color: white;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
     .text-box {
-        width: 90%; /* Reduzi para melhorar o espaçamento */
+        width: 90%; 
         background: #fdfaf6;
         padding: 20px;
         border-radius: 8px;
@@ -534,7 +534,7 @@ ul.nav.active {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .text-box h2 {
-        font-size: 22px; /* Ajustado para mobile */
+        font-size: 22px; 
         margin-bottom: 10px;
         font-style: italic;
         color: #6d5c4d;
@@ -547,14 +547,14 @@ ul.nav.active {
     }
     .text-section {
         width: 100%;
-        padding: 20px; /* Menos padding para economizar espaço */
+        padding: 20px; 
         color: #6d5c4d;
         background: #f5f3f0;
-        text-align: center; /* Centraliza o texto no mobile */
+        text-align: center; 
     }
 
     .text-section h1 {
-        font-size: 28px; /* Menor para caber melhor */
+        font-size: 28px; 
         letter-spacing: 1px;
     }
 
@@ -595,44 +595,44 @@ ul.nav.active {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding: 40px 20px; ; /* Reduz o padding para menos espaçamento */
+        padding: 40px 20px; ; 
     }
 
     .footer-social {
-        order: -1; /* Faz com que as redes sociais sejam as primeiras a aparecer */
+        order: -1; 
         flex: 1 1 auto;
-        max-width: 90%; /* Ocupa toda a largura no mobile */
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        max-width: 90%; 
+        margin: 10px 0; 
     }
 
     .footer-contactos {
-        order: 1; /* Faz com que os contactos sejam os segundos a aparecer */
+        order: 1; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0; 
     }
 
     .footer-logo {
-        order: 2; /* Faz com que o logo seja o terceiro a aparecer */
+        order: 2; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin: 10px 0; /* Aumenta a margem para melhor espaçamento */
+        margin: 10px 0;
     }
 
     .footer-links {
-        order: 3; /* Faz com que os links sejam os quartos a aparecer */
+        order: 3; 
         text-align: center;
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
+        margin-top: 10px; 
     }
 
     .footer-credit {
-        order: 4; /* Faz com que os créditos sejam os últimos a aparecer */
+        order: 4; 
         flex: 1 1 auto;
         max-width: 90%;
-        margin-top: 10px; /* Aumenta a margem superior */
-        width: 100%; /* Garante que ocupa toda a largura */
+        margin-top: 10px; 
+        width: 100%; 
         text-align: center;
     }
 }
@@ -698,7 +698,7 @@ ul.nav.active {
     <footer>
         <div class="footer-container">
             
-            <!-- CONTACTOS - Esquerda -->
+            
             <div class="footer-contactos">
                 <h1> CONTACTE-NOS</h1>
                 <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
@@ -708,7 +708,7 @@ ul.nav.active {
                 <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
             </div>
     
-            <!-- REDES SOCIAIS - Centro -->
+           
             <div class="footer-social">
                 <h3> SIGA-NOS</h3>
                 <div class="social-icons">
@@ -724,7 +724,7 @@ ul.nav.active {
                 </div>
             </div>
     
-            <!-- LOGO + LINKS - Direita -->
+            
             <div class="footer-logo">
                 <a href="batizados-eventos.html">
                     <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
