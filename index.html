@@ -308,12 +308,52 @@ body, html {
     .gallery-item {
         position: relative;
         width: 300px;
-        height: 450px;
+        height: 370px;
         overflow: hidden;
         cursor: pointer;
-        border-radius: 10px;
+        padding: 40px 0;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s, box-shadow 0.3s; 
         }
+    .gallery-item-quinta {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img/img4.webp');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
 
+    .gallery-item-momentos {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img/img6.webp');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+
+    .gallery-item-ambientes{
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img/img5.webp');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+    .gallery-item img {
+        display: none;
+    }
+
+    .gallery-item-quinta:hover {
+        transform: scale(1.08); 
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    }
+    .gallery-item-momentos:hover {
+        transform: scale(1.08); 
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    }
+    .gallery-item-ambientes:hover {
+        transform: scale(1.08); 
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    }
     .gallery-item img {
         width: 100%;
         height: 100%;
@@ -324,8 +364,13 @@ body, html {
     .gallery-item:hover img {
         transform: scale(1.1);
         }
+    .gallery-item-link {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+    }
 
-    .gallery-item .label {
+    .gallery-item .titulo {
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -334,9 +379,10 @@ body, html {
         font-size: 18px;
         font-weight: bold;
         text-transform: uppercase;
-        background: rgba(0, 0, 0, 0.6);
+        letter-spacing: 1px;
         padding: 10px 20px;
         border-radius: 5px;
+        font-family: 'Sigma', monospace;
 }
         
 footer {
@@ -706,11 +752,17 @@ ul.nav.active {
         flex-direction: column;
         align-items: center;
     }
-
-    .gallery-item {
-        width: 90%; 
-        height: auto;
+    .gallery-item{
+        width: 100%; 
+        height: 150px; 
     }
+    .gallery-item-ambientes,
+    .gallery-item-momentos,
+    .gallery-item-quinta {
+        width: 90%; 
+        height: 230px; /* Aumenta a altura */
+    }
+
 
     .events {
         padding: 20px; 
@@ -888,21 +940,34 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="description">Conheça a lista de eventos realizados no nosso espaço, assim como a estrutura completa dos serviços incluídos em cada um deles. Garantimos momentos únicos onde, juntamente com familiares, amigos e/ou colaboradores, desfrutarão de um dia inesquecível.</p>
         <a class="btn" href="Eventos.html">CONHECER</a>
     </section>
+   
     <section class="gallery">
-        <div class="gallery-item" onclick="location.href='PortofolioSobreAquinta.html'">
-            <img src="source/img/img4.webp" alt="Ambientes">
-            <div class="label">QUINTA</div>
-        </div>
-    
-        <div class="gallery-item" onclick="location.href='PortofolioSobreDecoraçãoeAmbientes.html'">
-            <img src="source/img/img5.webp" alt="Ambientes">
-            <div class="label">AMBIENTES</div>
-        </div>
-    
-        <div class="gallery-item" onclick="location.href='PortofolioSobreOsMomentos.html'">
-            <img src="source/img/img6.webp" alt="Momentos">
-            <div class="label">MOMENTOS</div>
-        </div>
+        <div class="gallery-item-quinta">
+        <a href="PortofolioSobreAquinta.html" class="gallery-item-link">
+            <div class="gallery-item">
+                <img src="source/img.pag3/img2.jpg" alt="Casamentos">
+                <div class="titulo">A QUINTA</div>
+            </div>
+        </a>
+    </div>
+
+        <div class="gallery-item-ambientes">
+        <a href="PortofolioSobreOsMomentos.html" class="gallery-item-link">
+            <div class="gallery-item">
+                <img src="source/img.pag3/img3.jpg" alt="Baptizados">
+                <div class="titulo">AMBIENTES</div>
+            </div>
+        
+        </a>
+    </div>
+        <div class="gallery-item-momentos">
+        <a href="comunhoes-eventos.html" class="gallery-item">
+            <div class="gallery-item">
+                <img src="source/img.pag3/img4.jpg" alt="Aniversários">
+                <div class="titulo">MOMENTOS</div>
+            </div>
+        </a>
+    </div>
     </section>
     <footer>
         <div class="footer-container">
