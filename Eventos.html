@@ -193,107 +193,79 @@ body {
     padding: 40px;
     gap: 30px; 
     overflow-x: auto;
-}
+    }
 
-.event-section-card {
-    width: 260px;
-    height: 245px; 
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px; 
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-    background-size: cover;
-    background-position: center;
-}
+    .event-section-card {
+        width: 260px;
+        height: 245px; 
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px; 
+        position: relative;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+        background-size: cover;
+        background-position: center;
+    }
 
-.event-section-card-casamentos {
-    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img2.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-}
+    .event-section-card-casamentos {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
 
-.event-section-card-batizados {
-    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img3.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-}
+    .event-section-card-batizados {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img3.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
 
-.event-section-card-comunhoes {
-    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img4.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-}
+    .event-section-card-comunhoes {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img4.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
 
-.event-section-card--eventos-corporativos {
-    background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img6.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-}
+    .event-section-card--eventos-corporativos {
+        background-image: linear-gradient(to bottom, rgba(255, 215, 0, 0) 30%, #8B735B), url('source/img.pag3/img6.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+    .event-section-card--eventos-corporativos:hover,
+    .event-section-card-casamentos:hover,
+    .event-section-card-batizados:hover,
+    .event-section-card-comunhoes:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.7s ease, box-shadow 0.3s ease;
+    }
+    .event-section-title {
+        font-size: 22px;
+        color: #fff;
+        margin-top: 179px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: 'Sigma', monospace;
+    }
+    .event-section-title-Corporativos {
+        font-size: 22px;
+        color: #fff;
+        margin-top: 165px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: 'Sigma', monospace;
+    }
 
-.event-section-card img {
-    display: none;
-}
-
-.event-section-card-casamentos:hover {
-    transform: scale(1.08); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-}
-.event-section-card-batizados:hover {
-    transform: scale(1.08); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-}
-.event-section-card-comunhoes:hover {
-    transform: scale(1.08); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-}
-.event-section-card--eventos-corporativos:hover {
-    transform: scale(1.08); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-}
-
-
-.event-section-card img {
-    width: 100%;
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.event-section-card:hover img {
-    transform: scale(1.05); /* Efeito de zoom na imagem */
-}
-
-.event-section-title {
-    font-size: 22px;
-    color: #fff;
-    margin-top: 179px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Sigma', monospace;
-}
-
-.event-section-title-Corporativos {
-    font-size: 22px;
-    color: #fff;
-    margin-top: 165px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Sigma', monospace;
-}
-
-.event-section-link {
-    text-decoration: none;
-    display: block;
-    width: 100%;
+    .event-section-link {
+        text-decoration: none;
+        display: block;
+        width: 100%;
 }
 footer {
             background-color:  #f1f1f1;
@@ -737,7 +709,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="event-section-card-casamentos">
         <a href="eventos-casamentos.html" class="event-section-link">
             <div class="event-section-card">
-                <img src="source/img.pag3/img2.jpg" alt="Casamentos">
                 <div class="event-section-title">CASAMENTOS</div>
             </div>
         </a>
@@ -746,7 +717,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="event-section-card-batizados">
         <a href="batizados-eventos.html" class="event-section-link">
             <div class="event-section-card">
-                <img src="source/img.pag3/img3.jpg" alt="Baptizados">
                 <div class="event-section-title">BATIZADOS</div>
             </div>
         
@@ -755,7 +725,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="event-section-card-comunhoes">
         <a href="comunhoes-eventos.html" class="event-section-link">
             <div class="event-section-card">
-                <img src="source/img.pag3/img4.jpg" alt="Aniversários">
                 <div class="event-section-title">COMUNHÕES</div>
             </div>
         </a>
@@ -763,7 +732,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="event-section-card--eventos-corporativos">
         <a href="EventosCorporativos-eventos.html" class="event-section-link">
             <div class="event-section-card">
-                <img src="source/img.pag3/img6.jpg" alt="Eventos Corporativos">
                 <div class="event-section-title-Corporativos">EVENTOS CORPORATIVOS</div>
             </div>
         </a>
