@@ -23,10 +23,10 @@ body {
     position: fixed;    
     top: 0;     
     left: 0;    
-    width: 100%;    
+    width: 100%;   
     display: flex;  
     justify-content: space-between;    
-    align-items: center;   
+    align-items: center;    
     background: white;  
     padding: 20px 50px; 
     z-index: 1000;  
@@ -41,6 +41,7 @@ body {
     .nav {
     display: flex;
     flex-grow: 1; 
+     
     justify-content: center; 
     gap: 40px;
     list-style: none;
@@ -147,15 +148,28 @@ body {
 
     .tall-image {
         grid-row: span 2;
-        height: 590px; 
+        width: 100%;
+        height: 620px; 
+        object-fit: cover;
+        border-radius: 10px;
+        grid-column: -2/-1;
+        margin-left: auto;
+    }
+    .tall-image-esquerda {
+        width: 100%;
+        grid-row: span 2;
+        height: 620px; 
         object-fit: cover;
         border-radius: 10px;
     }
 
-    .gallery-image:hover,
-    .tall-image:hover {
+    .gallery-image:hover {
         transform: scale(1.05);
 }
+    .tall-image:hover,
+    .tall-image-esquerda:hover {
+        transform: scale(01.03);
+    }
 
 .modal {
     display: none;
@@ -172,14 +186,12 @@ body {
     }
 
 
-    .modal-content {
-        max-width: 80%;
+    .modal-content  {
+        max-width: 60%;
         max-height: 80%;
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     }
-
-
     .close {
         position: absolute;
         top: 20px;
@@ -204,7 +216,6 @@ body {
         padding: 10px;
         border-radius: 5px;
     }
-
     .modal-nav:hover {
         background: rgba(0, 0, 0, 0.8);
     }
@@ -215,7 +226,9 @@ body {
 
     #nextImage {
         right: 10%;
-}
+    }
+
+  
 footer {
             background-color:  #f1f1f1;
             padding: 40px 20px;
@@ -375,7 +388,7 @@ footer {
 
     .menu-toggle:hover {
         background: white; 
-        transform: scale(1.1);
+        transform: scale(1.1); 
     }
     .nav-container {
     position: fixed;
@@ -535,7 +548,8 @@ ul.nav.active {
         transition: transform 0.3s ease-in-out;
     }
 
-    .tall-image {
+    .tall-image ,
+    .tall-image-esquerda {
         width: 100%;
         height: 300px; 
         object-fit: cover;
@@ -589,7 +603,7 @@ ul.nav.active {
     position: absolute;
     top: 45%; 
     transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 30px; 
     color: white;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
@@ -685,26 +699,27 @@ ul.nav.active {
     <section class="gallery-container">
         <h2 class="gallery-title">MOMENTOS</h2>
         <div class="gallery">
-            <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img8.jpg" class="tall-image-esquerda" alt="A quinta">
             <img src="source/img.portofolioaquinta/img2.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img3.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img9.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img5.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img6.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img7.jpg" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img8.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img4.jpg" class="tall-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img10.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img16.webp" class="tall-image-esquerda" alt="A quinta">
             <img src="source/img.portofolioaquinta/img11.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img12.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img13.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img14.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img15.webp" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img16.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img17.jpg" class="gallery-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img18.jpg" class="gallery-image" alt="A quinta">
         </div>
     
-       
+        <!-- Modal --> 
         <div id="imageModal" class="modal">
             <span id="closeModal" class="close">&times;</span>
             <span id="prevImage" class="modal-nav">&#10094;</span>
@@ -715,7 +730,7 @@ ul.nav.active {
     <footer>
         <div class="footer-container">
             
-            
+           
             <div class="footer-contactos">
                 <h1> CONTACTE-NOS</h1>
                 <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
@@ -725,7 +740,7 @@ ul.nav.active {
                 <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
             </div>
     
-           
+            
             <div class="footer-social">
                 <h3> SIGA-NOS</h3>
                 <div class="social-icons">
@@ -741,8 +756,9 @@ ul.nav.active {
                 </div>
             </div>
     
+            
             <div class="footer-logo">
-                <a href="PortofolioSobreOsMomentos.html">
+                <a href="PortofolioSobreAquinta.html">
                     <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
                 </a>
                 <ul class="footer-links">
@@ -762,7 +778,7 @@ ul.nav.active {
                 const prevBtn = document.getElementById("prevImage");
                 const nextBtn = document.getElementById("nextImage");
             
-                const images = document.querySelectorAll(".gallery-image, .tall-image");
+                const images = document.querySelectorAll(".gallery-image, .tall-image, .tall-image-esquerda");
                 let currentIndex = 0;
             
                 function openModal(index) {
@@ -809,6 +825,10 @@ ul.nav.active {
                         }
                     }
                 });
+                function toggleMenu() {
+                const nav = document.querySelector(".nav");
+                nav.classList.toggle("active");
+                }
                 function toggleMenu() {
                 const nav = document.querySelector(".nav");
                 nav.classList.toggle("active");
