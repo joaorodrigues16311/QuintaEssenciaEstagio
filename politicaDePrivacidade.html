@@ -468,6 +468,34 @@ ul.nav.active {
     }
 }
 @media (max-width: 768px) {
+    .banner {
+    height: 190px; 
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.banner h1 {
+    font-size: 18px; 
+    margin: 0; 
+    position: relative;
+    top: 30px;
+    transform: none;
+    text-align: center;
+}
+
+.TermoseCondições {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    top:145px;
+    transform: translateX(-50%);
+    font-size: 12px; 
+}
+}
+@media (max-width: 768px) {
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -627,5 +655,33 @@ ul.nav.active {
         </div>
         
     </footer>
+    <script>
+        function toggleMenu() {
+    const nav = document.querySelector(".nav");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+    } else {
+        nav.style.display = "none";
+    }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".nav").classList.remove("active");
+});
+document.addEventListener("DOMContentLoaded", function () {
+                const menuItems = document.querySelectorAll(".nav li > a");
+
+                menuItems.forEach(item => {
+                item.addEventListener("click", function (event) {
+                const submenu = this.nextElementSibling;
+
+                if (submenu && submenu.classList.contains("submenu")) {
+                event.preventDefault(); 
+                submenu.classList.toggle("active"); 
+                }
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
