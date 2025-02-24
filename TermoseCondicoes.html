@@ -2,36 +2,637 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Termmos e Condições - Casa dos Maias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    background: #f8f8f8;
+}
+
+    .nav-container {
+        position: fixed;    
+        top: 0;    
+        left: 0;    
+        width: 100%;    
+        display: flex; 
+        justify-content: space-between;    
+        align-items: center;    
+        background: white;  
+        padding: 20px 50px; 
+        z-index: 1000;  
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        height: 60px;
+        width: 80px;
+    }
+
+    .nav {
+    display: flex;
+    flex-grow: 1; 
+    justify-content: center; 
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.10s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    text-transform: uppercase;
+    transition: background 0.05s; 
+}
+
+.nav a:hover {
+    color: #c27a48;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 09px;
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+}
+.submenu a {
+    display: block; 
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+    }
+    .submenu:hover {
+        color: #8B6F4E;
+    }
+    
+   
+    .nav li:hover .submenu {
+        display: block;
+        
+    }
+    .nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    .nav ul li {
+        margin: 5px ;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    .nav ul li a:hover {
+        color: white !important;
+        background-color:#8B6F4E !important ;
+    }
+    .nav a:hover {
+        color: #8B6F4E  !important;
+    }
+    .banner {
+    background-color: #b8a890;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative; 
+}
+
+.banner h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    margin-left: 70px;
+    margin-top: 07%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: normal;
+}
+
+.TermoseCondições {
+    position: absolute;
+    bottom: 10px; 
+    right: 100px; 
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+}
+
+.TermoseCondições a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.content h2 {
+    color: #b8a890;
+    font-size: 22px;
+}
+
+.content p {
+    line-height: 1.3;
+}
+
+.content a {
+    color: #8b6f56;
+    text-decoration: none;
+}
+    .content-DireitosdePropriedadeIntelectual{
+        width: 80%;
+    margin: 30px auto;
+    }
+    .content-DireitosdePropriedadeIntelectual h2 {
+        color: #b8a890;
+        font-size: 22px;
+    }
+    .content-DireitosdePropriedadeIntelectual p {
+        line-height: 1.2;
+    }
+    .content-DireitosdePropriedadeIntelectual a {
+        color: #8b6f56;
+        text-decoration: none;
+    }
+footer {
+        background-color:  #f1f1f1;
+        padding: 40px 20px;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+        }
+
+        .footer-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        
+        .footer-contactos {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-contactos h1 {
+            font-size: 20px;
+            color: #8B6F4E;
+            margin-bottom: 10px;
+        }
+       
+         .footer-contactos a {
+            color: #555;
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
+        .footer-contactos p {
+            color: #5e4b35;
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        .footer-contactos a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        
+        .footer-social {
+            flex: 1;
             text-align: center;
         }
-        .container {
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+
+        .footer-social h3 {
+            font-size: 20px;
+            color: #8B6F4E;
+            margin-bottom: 15px;
         }
-        h1 {
-            color: #ff9900;
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        p {
-            color: #333;
+
+        .social-icons a {
+            transition: transform 0.3s ease;
         }
-    </style>
+
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+    
+        .footer-logo {
+            flex: 1;
+            text-align: right;
+            min-width: 250px;
+        }
+
+        .footer-logo img {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        text-align: right;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #7a7777;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #000;
+        }
+        .footer-credit {
+            font-size: 12px; 
+            color: #777;
+            font-style: italic;
+            margin-top: 5px; 
+            text-align: right;
+        }
+
+        .footer-credit a {
+            color: #7a7777;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        .footer-credit a:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-contactos, .footer-social, .footer-logo {
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-top: 20px;
+            }
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 10003;
+        background: white;
+        padding: 12px 18px; 
+        border-radius: 50%; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s ease, transform 0.3s ease; 
+    }
+
+    .menu-toggle:hover {
+        background: white; 
+        transform: scale(1.1); 
+    }
+    .nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white; 
+    z-index: 10001;
+    padding: 15px 20px;
+    display: flex;
+    align-items: left; 
+    justify-content: space-between;
+    transition: background 0.3s ease; 
+    }
+    .nav {
+        position: fixed;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 61px;
+    left: -08px;
+    width: 100%;
+    z-index: 1003;
+    display: none;
+    align-items: left;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-top: 9px; 
+    line-height: 1.8;
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav.active {
+    display: flex;
+}
+
+ul.nav.active {
+    display: flex;
+    margin-left: 8px;
+}
+.nav a {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 5px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #666;
+}
+.nav a:hover {
+    color: #4d504a;
+}
+
+.nav ul li:hover {
+    color: #4d504a;
+}
+.nav li:last-child {
+    border-bottom: none;
+}
+.logo {
+    display: block;
+}
+.submenu {
+    display: none;
+    position: absolute; 
+    background: rgba(255, 255, 255, 0.95); 
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0;
+    transform: translateY(10px); 
+    z-index: 1001; 
+    line-height: 1.8; 
+    border-radius: 5px;
+    letter-spacing: .3em;
+    font-family: 'Muli', sans-serif;
+    flex-direction: column;
+    gap: 12px;
+    left: 0; 
+}
+.nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.submenu a {
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    color: #4d504a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+.submenu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
+}
+ 
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px; ; 
+    }
+
+    .footer-social {
+        order: -1; 
+        flex: 1 1 auto;
+        max-width: 90%; 
+        margin: 10px 0; 
+    }
+
+    .footer-contactos {
+        order: 1; 
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; 
+    }
+
+    .footer-logo {
+        order: 2; 
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin: 10px 0; 
+    }
+
+    .footer-links {
+        order: 3; 
+        text-align: center;
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; 
+    }
+
+    .footer-credit {
+        order: 4; 
+        flex: 1 1 auto;
+        max-width: 90%;
+        margin-top: 10px; 
+        width: 100%; 
+        text-align: center;
+    }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Ainda estamos em construção 🚧</h1>
-        <p>Aguarde... O futuro promete! 🚀</p>
-    </div>
+    
+    <header>
+        <div class="nav-container" id="navbar">
+            <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias Logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Eventos.html">Eventos</a></li>
+                <li>
+                    <a>Portofólio</a>
+                    <ul class="submenu">
+                        <li><a href="PortofolioSobreAquinta.html">Quinta</a></li>
+                        <li><a href="PortofolioSobreOsMomentos.html">Momentos</a></li>
+                        <li><a href="PortofolioSobreDecoraçãoeAmbientes.html">Decoração & Ambiente</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="banner">
+        <h1>TERMOS E CONDIÇÕES</h1>
+        <p class="TermoseCondições"><a href="index.html">Home</a> / Termos e Condições</p>
+    </section>
+    <main class="content">
+        <h2>Introdução</h2>
+        <p>Estes Termos e Condições Padrão do Website escritos nesta página web devem gerir a sua utilização do nosso website, acessível em <a href="http://www.casadosmaias.com/">http://www.casadosmaias.com/</a>.</p>
+        <p>Estes Termos serão aplicados na íntegra e afetarão o seu uso deste Website. Ao utilizar este Website, concorda em aceitar todos os termos e condições aqui escritos. Não deve usar este Website se discordar de qualquer um destes Termos e Condições Padrão do Website.</p>
+    </main>
+    <main class="content-DireitosdePropriedadeIntelectual">
+        <h2>Direitos de Propriedade Intelectual</h2>
+        <p>Todo o conteúdo deste site, salvo indicação em contrário, é propriedade da Casa dos Maias ou dos seus licenciadores, estando protegido por direitos autorais e demais legislações aplicáveis.</p>
+        <p>É-lhe concedida apenas uma licença limitada para visualizar os materiais aqui disponibilizados. Não é permitido:</p>
+        <p>1. Reproduzir ou distribuir qualquer conteúdo do site noutros meios;</p>
+        <p>2. Comercializar, vender ou sublicenciar qualquer material deste site;</p>
+        <p>3. Utilizar o site de forma prejudicial ao seu funcionamento ou à experiência de outros utilizadores;</p>
+        <p>4. Violar leis e regulamentos através do uso do site;</p>
+        <p>5. Realizar mineração ou extração de dados;</p>
+        <p>6. Utilizar o site para fins publicitários ou comerciais sem consentimento.</p>
+        <p>Determinadas áreas do site podem ter restrições de acesso. Qualquer credencial de login concedida deve ser mantida em sigilo.</p>
+    </main>
+    <main class="content">
+        <h2>Conteúdo do Usuário</h2>
+        <p>"Conteúdo" refere-se a qualquer material enviado ou publicado por si neste site, como textos, imagens ou vídeos. Ao publicar qualquer conteúdo, concede à Casa dos Maias uma licença global, irrevogável e sublicenciável para usar, modificar, publicar e distribuir esse material em qualquer meio.</p>
+        <p>O seu conteúdo deve ser original e não pode infringir direitos de terceiros. A Casa dos Maias reserva-se o direito de remover qualquer material sem aviso prévio.</p>
+    </main>
+    <main class="content">
+        <h2>Isenção de Garantias</h2>
+        <p>Este site é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. </p>
+        <p>A Casa dos Maias não assegura que o funcionamento do site será contínuo, livre de erros ou seguro.</p>
+    </main>
+    <main class="content">
+        <h2>Limitação de Responsabilidade</h2>
+        <p>A Casa dos Maias, bem como os seus diretores e funcionários, não serão responsáveis por quaisquer danos diretos, indiretos ou consequentes resultantes do uso deste site.</p>
+    </main>
+    <main class="content">
+        <h2>Indemnização</h2>
+        <p>O utilizador compromete-se a isentar a Casa dos Maias de quaisquer responsabilidades, custos ou despesas decorrentes da violação destes Termos. </p>
+        <p>Caso alguma cláusula seja considerada inválida, as demais permanecerão em vigor.</p>
+    </main>
+    <main class="content">
+        <h2>Alterações dos Termos</h2>
+        <p>A Casa dos Maias pode modificar estes Termos a qualquer momento, sendo responsabilidade do utilizador consultá-los regularmente.</p>
+    </main>
+    <main class="content">
+        <h2>Transferência de Direitos</h2>
+        <p>Podemos ceder, transferir ou subcontratar os nossos direitos e obrigações sob estes Termos sem necessidade de aviso prévio. No entanto, o utilizador não pode fazê-lo sem autorização.</p>
+    </main>
+    <main class="content">
+        <h2>Acordo Completo</h2>
+        <p>Estes Termos representam o contrato integral entre a Casa dos Maias e o utilizador, substituindo quaisquer acordos anteriores.</p>
+    </main>
+    <main class="content">
+        <h2>Lei e Jurisdição</h2>
+        <p>Estes Termos são regidos pelas leis locais, e qualquer disputa será resolvida pelos tribunais competentes do respetivo país.</p>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contactos">
+                <h1> CONTACTE-NOS</h1>
+                <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
+                <p><strong>Localização:</strong><a href="https://www.google.pt/maps/place/Casa+Dos+Maias/@41.260146,-8.6258776,17z/data=!3m1!4b1!4m6!3m5!1s0xd246798628a9ca7:0x501798605192f7b5!8m2!3d41.260146!4d-8.6233027!16s%2Fg%2F11bwfm7s92?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D"> Eng. Belmiro Mendes Azevedo, 4475 Maia</a></p>
+                <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
+            </div>
+    
+            
+            <div class="footer-social">
+                <h3> SIGA-NOS</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/p/Casa-dos-Maias-100064592603081/" target="_blank">
+                        <img src="source/img.icons/img3face.png" alt="Facebook">
+                    </a>
+                    <a href="https://web.whatsapp.com/send?phone=351913877180" target="_blank">
+                        <img src="source/img.icons/img1whats.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/casa_dos_maias_/" target="_blank">
+                        <img src="source/img.icons/img2insta.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+    
+            
+            <div class="footer-logo">
+                <a href="contactos.html">
+                    <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
+                </a>
+                <ul class="footer-links">
+                    <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
+                    <li><a href="politicaDePrivacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+                </ul>
+                <p class="footer-credit">Desenvolvido por: <a href="mailto:joaorodrigues16319@gmail.com">João Rodrigues</a></p>
+            </div>
+        </div>
+        
+    </footer>
 </body>
 </html>
