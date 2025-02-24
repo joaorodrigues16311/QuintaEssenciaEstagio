@@ -20,17 +20,17 @@
     
     
     .nav-container {
-    position: fixed;    /* Fixa o menu no topo da página, ele não se move ao rolar */
-    top: 0;     /* Mantém a barra no topo da página */
-    left: 0;    /* Alinha a barra à esquerda da tela */
-    width: 100%;    /* Faz com que a barra ocupe toda a largura da tela */
-    display: flex;  /* Usa Flexbox para alinhar os elementos dentro da barra */
-    justify-content: space-between;     /* Distribui os itens: um na esquerda e outro na direita */
-    align-items: center;    /* Centraliza os itens verticalmente */
-    background: white;  /* Define o fundo da barra como branco */
-    padding: 20px 50px; /* Adiciona espaço interno: 20px acima/abaixo e 50px nas laterais */
-    z-index: 1000;  /* Garante que a barra fique sobre outros elementos da página */
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   /* Adiciona uma leve sombra para destacar a barra */
+    position: fixed;    
+    top: 0;     
+    left: 0;    
+    width: 100%;   
+    display: flex;  
+    justify-content: space-between;     
+    align-items: center;    
+    background: white;  
+    padding: 20px 50px; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
 }
 
 .logo {
@@ -121,27 +121,27 @@
         height: 250px;
         display: flex;  
         justify-content: space-between; 
-        align-items: center; /* Centraliza verticalmente */
-        padding: 0 50px; /* Ajusta espaçamento nas laterais */
+        align-items: center;
+        padding: 0 50px; 
         color: white;
         position: relative;
 }
 
     .titulo {
-        font-size: 24px; /* Ajuste do tamanho */
+        font-size: 24px; 
         color: white;
         font-family: serif; 
         font-weight: normal;
         position: absolute;
-        left:100px; /* Mantém o título na esquerda */
+        left:100px;
         top: 70%; 
-        transform: translateY(-50%); /* Centraliza verticalmente */
+        transform: translateY(-50%); 
 }
     .historiaehome {
         position: absolute;
-        bottom: 60px; /* Distância da parte inferior */
+        bottom: 60px; 
         left: 80%;
-        transform: translateX(-50%); /* Centraliza horizontalmente */
+        transform: translateX(-50%); 
         font-size: 14px;
         font-style: italic;
         color: white;
@@ -155,25 +155,24 @@
         text-decoration: none;
         color: white;
 } 
-    /* Conteúdo */
     .conteudo {
-    display: flex; /* Ativa Flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Mantém o texto e a imagem separados */
-    max-width: 1200px; /* Define a largura máxima */
-    margin: 50px auto; /* Centraliza a seção na página */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 50px auto; 
     padding: 20px;
 }
 
 .texto {
-    width: 50%; /* Define que o texto ocupe metade do espaço */
-    text-align: center; /* Centraliza o texto */
+    width: 50%; 
+    text-align: center; 
     margin-right: 50px;
 }
 
 .texto h2 {
     font-size: 28px;
-    color: #c19a6b; /* Cor parecida com a da imagem */
+    color: #c19a6b; 
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -185,32 +184,32 @@
 }
 
 .imagem {
-    width: 50%; /* A imagem ocupa metade do espaço */
+    width: 50%; 
 }
 
 .imagem img {
-    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
-    border-radius: 5px; /* Borda arredondada opcional */
+    width: 100%; 
+    border-radius: 5px; 
 }
 
 .conteudo {
     display: flex;
-    align-items: center; /* Garante alinhamento vertical */
+    align-items: center; 
     justify-content: space-between; 
     max-width: 1200px;
     margin: 80px auto;
-    gap: 20px; /* Garante um espaçamento uniforme */
+    gap: 20px; 
 }
 
     .texto {
-        flex: 1; /* Ocupará o espaço disponível */
-        text-align: left; /* Melhor leitura */
+        flex: 1; 
+        text-align: left; 
         font-style: italic;
     }
 
 .texto {
-    flex: 1; /* Ocupará o espaço disponível */
-        text-align: left; /* Melhor leitura */
+    flex: 1; 
+        text-align: left; 
         font-style: italic;
 }
 
@@ -267,18 +266,18 @@
 }
 .conteudo-elegante {
     display: flex;
-    align-items: center; /* Garante alinhamento vertical */
-    justify-content: space-between; /* Espaço uniforme entre os elementos */
+    align-items: center; 
+    justify-content: space-between; 
     max-width: 1200px;
     margin: 80px auto;
-    gap: 20px; /* Garante um espaçamento uniforme */
+    gap: 20px; 
 }
 
     .conteudo-elegante-texto {
-        flex: 1; /* Ocupará o espaço disponível */
-        text-align: left; /* Melhor leitura */
+        flex: 1;
+        text-align: left; 
         font-style: italic;
-        order: 2; /* Move o texto para a direita */
+        order: 2; 
     }
 
     .conteudo-elegante-texto h2 {
@@ -322,11 +321,11 @@
     .image-stack {
         position: relative;
         left:16%;
-        width: 350px; /* Ajuste conforme necessário */
+        width: 350px; 
         height: auto;
         display: flex;
-        flex-direction: column; /* Mantém as imagens empilhadas */
-        align-items: center; /* Centraliza as imagens */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .image-stack img {
@@ -346,20 +345,19 @@
         z-index: 2;
     }
 
-    /* NOVA IMAGEM NO MEIO, MAS DESLOCADA PARA A ESQUERDA */
     .img-esquerda {
         width: 85%;
         position: absolute;
-        left: -350px; /* Move um pouco para a esquerda */
-        top: 50%; /* Coloca no meio das outras */
-        transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+        left: -350px;
+        top: 50%;
+        transform: translateY(-50%); 
         z-index: 1;
     }
 
     .img-small {
         width: 85%;
         position: relative;
-        margin-top: -40px; /* Ajusta a sobreposição */
+        margin-top: -40px; 
         z-index: 2;
     }
 
@@ -547,7 +545,6 @@ footer {
             margin: auto;
         }
 
-        /* ESTILO DOS CONTACTOS */
         .footer-contactos {
             flex: 1;
             min-width: 250px;
@@ -577,7 +574,6 @@ footer {
             text-decoration: underline;
         }
 
-        /* ESTILO DAS REDES SOCIAIS */
         .footer-social {
             flex: 1;
             text-align: center;
@@ -641,10 +637,10 @@ footer {
             color: #000;
         }
         .footer-credit {
-            font-size: 12px; /* Menor tamanho de fonte */
+            font-size: 12px; 
             color: #777;
             font-style: italic;
-            margin-top: 5px; /* Reduzi a margem superior para ficar mais perto dos links */
+            margin-top: 5px; 
             text-align: right;
         }
 
@@ -680,17 +676,17 @@ footer {
         right: 15px;
         z-index: 10003;
         background: white;
-        padding: 12px 18px; /* Aumenta um pouco o padding para um toque mais confortável */
-        border-radius: 50%; /* Torna o botão circular */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito mais pronunciado */
+        padding: 12px 18px; 
+        border-radius: 50%; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
         cursor: pointer;
         border: none;
-        transition: background 0.3s ease, transform 0.3s ease; /* Adiciona transição para suavizar a interação */
+        transition: background 0.3s ease, transform 0.3s ease; 
     }
 
     .menu-toggle:hover {
-        background: white; /* Escurece um pouco a cor ao passar o mouse */
-        transform: scale(1.1); /* Aumenta ligeiramente o botão ao passar o mouse */
+        background: white; 
+        transform: scale(1.1); 
     }
     .nav-container {
     position: fixed;
@@ -1029,17 +1025,15 @@ function toggleMenu() {
     nav.classList.toggle("active");
 }
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleciona todos os itens do menu que têm submenus
     const menuItems = document.querySelectorAll(".nav li > a");
 
     menuItems.forEach(item => {
         item.addEventListener("click", function (event) {
             const submenu = this.nextElementSibling;
 
-            // Verifica se existe submenu
             if (submenu && submenu.classList.contains("submenu")) {
-                event.preventDefault(); // Impede o link de navegar
-                submenu.classList.toggle("active"); // Alterna a visibilidade do submenu
+                event.preventDefault(); 
+                submenu.classList.toggle("active"); 
             }
         });
     });
@@ -1071,13 +1065,10 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </header>
 
-    <!-- Banner -->
     <section class="banner">
         <h1 class="titulo">A QUINTA</h1>
         <p class="historiaehome"><a href="index.html">Home</a> / História</p>
     </section>
-
-    <!-- Conteúdo -->
     <section class="conteudo">
         <div class="texto">
             <h2>Casa dos Maias</h2>
@@ -1155,7 +1146,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     
     <div class="opinions-container">
-        <!-- Caixa fixa de opinião -->
         <div class="opinions-box">
             <h2>OPINIÕES ACERCA DA CASA DOS MAIAS</h2>
             <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -1164,7 +1154,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="btn" ><a href="https://www.casamentos.pt/quintas-para-casamentos/casa-dos-maias-maia--e105653">Para mais opiniões</a></button>
         </div>
        
-        <!-- Carrossel de Opiniões -->
         <div class="opinions-slider" id="opinions-slider">
             <div class="opinion active">
                 <p><strong>Rui S.</strong> <br> Casado a 23/08/2022</p>
@@ -1189,7 +1178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <footer>
         <div class="footer-container">
             
-            <!-- CONTACTOS - Esquerda -->
             <div class="footer-contactos">
                 <h1> CONTACTE-NOS</h1>
                 <p><strong>Telefone:</strong> <a href="tel:913877180">913 877 180</a></p>
@@ -1199,7 +1187,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p><strong>Email:</strong> <a href="mailto:casadosmaias@quinta-essencia.pt">casadosmaias@quinta-essencia.pt</a></p>
             </div>
     
-            <!-- REDES SOCIAIS - Centro -->
             <div class="footer-social">
                 <h3> SIGA-NOS</h3>
                 <div class="social-icons">
@@ -1214,8 +1201,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
                 </div>
             </div>
-    
-            <!-- LOGO + LINKS - Direita -->
+
             <div class="footer-logo">
                 <a href="Sobre.html">
                     <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
