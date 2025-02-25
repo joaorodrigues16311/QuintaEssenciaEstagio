@@ -23,51 +23,49 @@ body {
     position: fixed;    
     top: 0;     
     left: 0;    
-    width: 100%;    
+    width: 100%;   
     display: flex;  
     justify-content: space-between;     
     align-items: center;    
-    background: white;  
+    background: rgba(206, 177, 144, 0.8);  
     padding: 20px 50px; 
-    z-index: 1000;  
+    z-index: 1000; 
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
 }
 
-    .logo {
-        height: 60px;
-        width: 80px;
-    }
-
+.logo {
+    height: 40px; 
+    width: 170px;
+}
 
 .nav {
     display: flex;
     flex-grow: 1; 
-     
     justify-content: center; 
     gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
-}
+    margin-left:41%;
+    }
 
-.nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 15px;
-    transition: color 0.3s, transform 0.10s;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; 
-    text-transform: uppercase;
-    transition: background 0.05s; 
-}
+    .nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        font-size: 18px;
+        transition: color 0.3s, transform 0.10s;
+        font-family: 'cursive';
+        font-weight: 600; 
+        transition: background 0.05s; 
+    }
 
-.nav a:hover {
-    color: #c27a48;
-}
-.submenu {
-    display: none;
+    .nav a:hover {
+        color: #c27a48;
+    }
+    .submenu {
+        display: none;
     position: absolute;
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -75,18 +73,17 @@ body {
     margin-top: 09px;
     line-height: 1.8; 
     border-radius: 5px;
-    letter-spacing: .3em;
-    font-family: 'Muli', sans-serif;
-}
-.submenu a {
-    display: block; 
+    font-family: 'Muli';
+    font-weight: 600; 
+    }
+    .submenu a {
+        display: block; 
     border-bottom: 1px solid #e1e1e1;
     color: #4d504a;
     text-decoration: none;
     font-weight: bold;
-    font-size: 11px;
-    font-style: italic;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-family: 'cursive';
     }
     .submenu:hover {
         color: #8B6F4E;
@@ -111,10 +108,10 @@ body {
 
     .nav ul li a:hover {
         color: white !important;
-        background-color:#8B6F4E !important ;
+        background-color:#B8A389!important ;
     }
     .nav a:hover {
-        color: #8B6F4E  !important;
+        color: white !important;
     }
 .container {
         display: flex;
@@ -134,34 +131,17 @@ body {
             justify-content: center;
         }
 
-        .overlay {
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            border: 2px solid gold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .overlay h2 {
-            font-size: 32px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
         .text-section {
             flex: 1;
             padding: 40px;
             color: #6d5c4d;
-            background: #f5f3f0;
+            background-color: rgb(241, 226, 209);
         }
 
         .text-section h1 {
             font-size: 36px;
             letter-spacing: 2px;
-            font-style: oblique;
+            font-family:'Lora';
         }
 
         .text-section em {
@@ -169,12 +149,13 @@ body {
             color: #9d826d;
             display: block;
             margin-bottom: 10px;
+            font-family:'Lora';
         }
 
         .text-section p {
             font-size: 18px;
             line-height: 1.6;
-            font-style: italic;
+            font-family:'Lora';
         }
 
         .btn {
@@ -217,6 +198,7 @@ footer {
             padding: 40px 20px;
             color: #333;
             font-family: 'Arial', sans-serif;
+            background-color: rgb(241, 226, 209);
         }
 
         .footer-container {
@@ -680,7 +662,6 @@ ul.nav.active {
     <div class="container">
         <div class="image-section">
             <div class="overlay">
-                <h2>Casamentos</h2> 
             </div>
         </div>
         <div class="text-section">
