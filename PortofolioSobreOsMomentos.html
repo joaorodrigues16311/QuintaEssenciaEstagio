@@ -25,48 +25,47 @@ body {
     left: 0;    
     width: 100%;   
     display: flex;  
-    justify-content: space-between;    
+    justify-content: space-between;     
     align-items: center;    
-    background: white;  
+    background: rgba(206, 177, 144, 0.8);  
     padding: 20px 50px; 
-    z-index: 1000;  
+    z-index: 1000; 
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
 }
 
-    .logo {
-        height: 60px;
-        width: 80px;
-    }
+.logo {
+    height: 40px; 
+    width: 170px;
+}
 
-    .nav {
+.nav {
     display: flex;
     flex-grow: 1; 
-     
     justify-content: center; 
     gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
-}
+    margin-left:41%;
+    }
 
-.nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 15px;
-    transition: color 0.3s, transform 0.10s;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; 
-    text-transform: uppercase;
-    transition: background 0.05s; 
-}
+    .nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        font-size: 18px;
+        transition: color 0.3s, transform 0.10s;
+        font-family: 'cursive';
+        font-weight: 600; 
+        transition: background 0.05s; 
+    }
 
-.nav a:hover {
-    color: #c27a48;
-}
-.submenu {
-    display: none;
+    .nav a:hover {
+        color: #c27a48;
+    }
+    .submenu {
+        display: none;
     position: absolute;
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -74,18 +73,17 @@ body {
     margin-top: 09px;
     line-height: 1.8; 
     border-radius: 5px;
-    letter-spacing: .3em;
-    font-family: 'Muli', sans-serif;
-}
-.submenu a {
-    display: block; 
+    font-family: 'Muli';
+    font-weight: 600; 
+    }
+    .submenu a {
+        display: block; 
     border-bottom: 1px solid #e1e1e1;
     color: #4d504a;
     text-decoration: none;
     font-weight: bold;
-    font-size: 11px;
-    font-style: italic;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-family: 'cursive';
     }
     .submenu:hover {
         color: #8B6F4E;
@@ -110,10 +108,10 @@ body {
 
     .nav ul li a:hover {
         color: white !important;
-        background-color:#8B6F4E !important ;
+        background-color:#B8A389!important ;
     }
     .nav a:hover {
-        color: #8B6F4E  !important;
+        color: white !important;
     }
 .gallery-container {
     max-width: 1200px;
@@ -128,49 +126,28 @@ body {
         color: #6d5c4d;
         font-family:'Playfair Display', serif;
         margin-bottom: 20px;
-    }
+        margin-top: 2%;
+        }
+    
 
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 15px;
+        gap: 07px;
         align-items: center;
+        margin-top: 4%;
     }
 
     .gallery-image {
         width: 100%;
         height: 300px; 
         object-fit: cover;
-        border-radius: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out;
     }
-
-    .tall-image {
-        grid-row: span 2;
-        width: 100%;
-        height: 620px; 
-        object-fit: cover;
-        border-radius: 10px;
-        grid-column: -2/-1;
-        margin-left: auto;
-    }
-    .tall-image-esquerda {
-        width: 100%;
-        grid-row: span 2;
-        height: 620px; 
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
     .gallery-image:hover {
         transform: scale(1.05);
-}
-    .tall-image:hover,
-    .tall-image-esquerda:hover {
-        transform: scale(01.03);
     }
-
 .modal {
     display: none;
     position: fixed;
@@ -186,12 +163,14 @@ body {
     }
 
 
-    .modal-content  {
-        max-width: 60%;
+    .modal-content {
+        max-width: 80%;
         max-height: 80%;
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     }
+
+
     .close {
         position: absolute;
         top: 20px;
@@ -216,6 +195,7 @@ body {
         padding: 10px;
         border-radius: 5px;
     }
+
     .modal-nav:hover {
         background: rgba(0, 0, 0, 0.8);
     }
@@ -226,14 +206,13 @@ body {
 
     #nextImage {
         right: 10%;
-    }
-
-  
+}
 footer {
             background-color:  #f1f1f1;
             padding: 40px 20px;
             color: #333;
             font-family: 'Arial', sans-serif;
+            background-color: rgb(241, 226, 209);
         }
 
         .footer-container {
@@ -322,7 +301,7 @@ footer {
             list-style: none;
             padding: 0;
             margin: 0;
-        text-align: right;
+            text-align: right;
         }
 
         .footer-links li {
@@ -699,17 +678,17 @@ ul.nav.active {
     <section class="gallery-container">
         <h2 class="gallery-title">MOMENTOS</h2>
         <div class="gallery">
-            <img src="source/img.portofolioaquinta/img8.jpg" class="tall-image-esquerda" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img8.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img2.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img3.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img9.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img5.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img6.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img7.jpg" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img4.jpg" class="tall-image" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img4.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img1.jpg" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img10.jpg" class="gallery-image" alt="A quinta">
-            <img src="source/img.portofolioaquinta/img16.webp" class="tall-image-esquerda" alt="A quinta">
+            <img src="source/img.portofolioaquinta/img16.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img11.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img12.webp" class="gallery-image" alt="A quinta">
             <img src="source/img.portofolioaquinta/img13.webp" class="gallery-image" alt="A quinta">
