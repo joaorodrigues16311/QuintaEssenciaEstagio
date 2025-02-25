@@ -18,27 +18,26 @@ body {
     background: #f8f8f8;
 }
 
-    .nav-container {
-        position: fixed;    
-        top: 0;    
-        left: 0;    
-        width: 100%;    
-        display: flex; 
-        justify-content: space-between;    
-        align-items: center;    
-        background: white;  
-        padding: 20px 50px; 
-        z-index: 1000;  
-        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
-        flex-wrap: wrap;
-    }
+.nav-container {
+    position: fixed;    
+    top: 0;     
+    left: 0;    
+    width: 100%;   
+    display: flex;  
+    justify-content: space-between;     
+    align-items: center;    
+    background: rgba(206, 177, 144, 0.8);  
+    padding: 20px 50px; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);   
+}
 
-    .logo {
-        height: 60px;
-        width: 80px;
-    }
+.logo {
+    height: 40px; 
+    width: 170px;
+}
 
-    .nav {
+.nav {
     display: flex;
     flex-grow: 1; 
     justify-content: center; 
@@ -46,26 +45,26 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-}
+    margin-left:41%;
+    }
 
-.nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 15px;
-    transition: color 0.3s, transform 0.10s;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; 
-    text-transform: uppercase;
-    transition: background 0.05s; 
-}
+    .nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        font-size: 18px;
+        transition: color 0.3s, transform 0.10s;
+        font-family: 'cursive';
+        font-weight: 600; 
+        transition: background 0.05s; 
+    }
 
-.nav a:hover {
-    color: #c27a48;
-}
-.submenu {
-    display: none;
+    .nav a:hover {
+        color: #c27a48;
+    }
+    .submenu {
+        display: none;
     position: absolute;
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -73,18 +72,17 @@ body {
     margin-top: 09px;
     line-height: 1.8; 
     border-radius: 5px;
-    letter-spacing: .3em;
-    font-family: 'Muli', sans-serif;
-}
-.submenu a {
-    display: block; 
+    font-family: 'Muli';
+    font-weight: 600; 
+    }
+    .submenu a {
+        display: block; 
     border-bottom: 1px solid #e1e1e1;
     color: #4d504a;
     text-decoration: none;
     font-weight: bold;
-    font-size: 11px;
-    font-style: italic;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-family: 'cursive';
     }
     .submenu:hover {
         color: #8B6F4E;
@@ -109,13 +107,13 @@ body {
 
     .nav ul li a:hover {
         color: white !important;
-        background-color:#8B6F4E !important ;
+        background-color:#B8A389!important ;
     }
     .nav a:hover {
-        color: #8B6F4E  !important;
+        color: white !important;
     }
     .banner {
-    background-color: #b8a890;
+    background-color: rgba(206, 177, 144, 0.8);
     text-align: center;
     padding: 30px 10px;
     position: relative; 
@@ -548,7 +546,7 @@ ul.nav.active {
     
     <header>
         <div class="nav-container" id="navbar">
-            <img class="logo" src="source/img/CASADOSMAISIMG.svg" alt="Casa dos Maias Logo">
+            <img class="logo" src="source/img/casaodsmaiaslogoGRANDE.png" alt="Casa dos Maias Logo">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav">
                 <li><a href="index.html">Início</a></li>
@@ -644,7 +642,7 @@ ul.nav.active {
             
             <div class="footer-logo">
                 <a href="contactos.html">
-                    <img src="source/img/casadoismaiaimpec.png" alt="Logo Casa dos Maias">
+                    <img src="source/img/casaodsmaiaslogoGRANDE.png" alt="Logo Casa dos Maias">
                 </a>
                 <ul class="footer-links">
                     <li><a href="TermoseCondicoes.html">TERMOS E CONDIÇÕES</a></li>
