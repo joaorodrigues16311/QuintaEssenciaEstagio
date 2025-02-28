@@ -133,12 +133,13 @@ body, html {
     display: none;
 }
 .logo-scrollled {
-    display: none;
-    height: 40px; 
-    width: 170px;
+    height: 01px; 
+    width: 01px;
 }
 .scrolled .logo-scrollled {
     display: block;
+    height: 40px; 
+    width: 170px;
 }
 .scrolled {
     position: fixed;
@@ -672,10 +673,19 @@ footer {
         justify-content: space-between;
         padding: 15px 20px;
     }
-
+  
+    .logo { 
+    display: none;
+    }
     .scrolled .logo {
-        height: 40px; 
-        width: 80px;
+    display: none;
+    }
+    .logo-scrollled {
+    height: 40px !important; 
+    width: 130px !important;
+    }
+    .scrolled .logo-scrollled {
+    display: block;
     }
 
     .scrolled .nav {
